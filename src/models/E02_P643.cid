@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Header id="CID_E02_P643" version="1" revision="0" toolID="SAS_Generator" nameStructure="IEDName">
-    <Text>GI 150kV ANTAM POMALAA — E02_P643</Text>
+    <Text>GI 150kV A — E02_P643</Text>
   </Header>
   <Communication>
     <SubNetwork name="StationBus" type="8-MMS" desc="Station Bus">

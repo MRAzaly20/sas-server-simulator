@@ -1,6 +1,6 @@
 # ============================================================
 #  CMakeLists.txt — Multi-executable IED build system
-#  GI 150kV ANTAM POMALAA — 18 per-IED standalone executables
+#  GI 150kV A — 18 per-IED standalone executables
 #
 #  Build from MSYS2 MinGW64:
 #    mkdir build_ied && cd build_ied
@@ -48,72 +48,72 @@ set(BASE_SOURCES
 #  add_ied_exe(<target> <main.c> <model.c> <model_prefix>)
 # ============================================================
 function(add_ied_exe TARGET_NAME MAIN_SRC MODEL_FILE MODEL_PREFIX)
-    add_executable(${TARGET_NAME}
-        ${CMAKE_CURRENT_LIST_DIR}/src/relays/${MAIN_SRC}
-        ${CMAKE_CURRENT_LIST_DIR}/src/models/${MODEL_FILE}
-        ${BASE_SOURCES}
-    )
-    target_compile_definitions(${TARGET_NAME} PRIVATE MODEL_EXTERN=${MODEL_PREFIX})
-    target_include_directories(${TARGET_NAME} PRIVATE
-        ${CMAKE_CURRENT_LIST_DIR}/src/shared
-        ${CMAKE_CURRENT_LIST_DIR}/src/relays
-        ${CMAKE_CURRENT_LIST_DIR}/src/models
-        ${LIB61850_INCLUDE_DIRS}
-    )
-    target_link_directories(${TARGET_NAME} PRIVATE
-        ${LIB61850_ROOT}/third_party/winpcap/Lib/x64
-    )
-    target_link_libraries(${TARGET_NAME} PRIVATE
-        ${LIB61850_LIBRARIES}
-        ws2_32
-        wpcap
-        Packet
-        Iphlpapi
-    )
+  add_executable(${TARGET_NAME}
+    ${CMAKE_CURRENT_LIST_DIR}/src/relays/${MAIN_SRC}
+    ${CMAKE_CURRENT_LIST_DIR}/src/models/${MODEL_FILE}
+    ${BASE_SOURCES}
+  )
+  target_compile_definitions(${TARGET_NAME} PRIVATE MODEL_EXTERN=${MODEL_PREFIX})
+  target_include_directories(${TARGET_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/src/shared
+    ${CMAKE_CURRENT_LIST_DIR}/src/relays
+    ${CMAKE_CURRENT_LIST_DIR}/src/models
+    ${LIB61850_INCLUDE_DIRS}
+  )
+  target_link_directories(${TARGET_NAME} PRIVATE
+    ${LIB61850_ROOT}/third_party/winpcap/Lib/x64
+  )
+  target_link_libraries(${TARGET_NAME} PRIVATE
+    ${LIB61850_LIBRARIES}
+    ws2_32
+    wpcap
+    Packet
+    Iphlpapi
+  )
 endfunction()
 
 # ============================================================
 #  Transformer Bay E01 — TRF-1 (150/30kV)
 # ============================================================
-add_ied_exe(E01_BCU   ied_c264_bcu.c          E01_BCU.c   model_E01_BCU)
-add_ied_exe(E01_P643  ied_p643_diff.c         E01_P643.c  model_E01_P643)
-add_ied_exe(E01_P142  ied_p142_overcurrent.c  E01_P142.c  model_E01_P142)
+add_ied_exe(E01_BCU ied_c264_bcu.c E01_BCU.c model_E01_BCU)
+add_ied_exe(E01_P643 ied_p643_diff.c E01_P643.c model_E01_P643)
+add_ied_exe(E01_P142 ied_p142_overcurrent.c E01_P142.c model_E01_P142)
 
 # ============================================================
 #  Transformer Bay E02 — TRF-2 (150/30kV)
 # ============================================================
-add_ied_exe(E02_BCU   ied_c264_bcu.c          E02_BCU.c   model_E02_BCU)
-add_ied_exe(E02_P643  ied_p643_diff.c         E02_P643.c  model_E02_P643)
-add_ied_exe(E02_P142  ied_p142_overcurrent.c  E02_P142.c  model_E02_P142)
+add_ied_exe(E02_BCU ied_c264_bcu.c E02_BCU.c model_E02_BCU)
+add_ied_exe(E02_P643 ied_p643_diff.c E02_P643.c model_E02_P643)
+add_ied_exe(E02_P142 ied_p142_overcurrent.c E02_P142.c model_E02_P142)
 
 # ============================================================
 #  Transformer Bay E03 — TRF-3 (150/30kV)
 # ============================================================
-add_ied_exe(E03_BCU   ied_c264_bcu.c          E03_BCU.c   model_E03_BCU)
-add_ied_exe(E03_P643  ied_p643_diff.c         E03_P643.c  model_E03_P643)
-add_ied_exe(E03_P142  ied_p142_overcurrent.c  E03_P142.c  model_E03_P142)
+add_ied_exe(E03_BCU ied_c264_bcu.c E03_BCU.c model_E03_BCU)
+add_ied_exe(E03_P643 ied_p643_diff.c E03_P643.c model_E03_P643)
+add_ied_exe(E03_P142 ied_p142_overcurrent.c E03_P142.c model_E03_P142)
 
 # ============================================================
 #  Coupler Bay E04 — Bus Section
 # ============================================================
-add_ied_exe(E04_BCU   ied_c264_bcu.c          E04_BCU.c   model_E04_BCU)
-add_ied_exe(E04_P143  ied_p142_overcurrent.c  E04_P143.c  model_E04_P143)
+add_ied_exe(E04_BCU ied_c264_bcu.c E04_BCU.c model_E04_BCU)
+add_ied_exe(E04_P143 ied_p142_overcurrent.c E04_P143.c model_E04_P143)
 
 # ============================================================
 #  Line-1 Bay E05 — 150kV Transmission Line
 # ============================================================
-add_ied_exe(E05_BCU   ied_c264_bcu.c          E05_BCU.c   model_E05_BCU)
-add_ied_exe(E05_P543  ied_p543_distance.c     E05_P543.c  model_E05_P543)
-add_ied_exe(E05_P142  ied_p142_overcurrent.c  E05_P142.c  model_E05_P142)
+add_ied_exe(E05_BCU ied_c264_bcu.c E05_BCU.c model_E05_BCU)
+add_ied_exe(E05_P543 ied_p543_distance.c E05_P543.c model_E05_P543)
+add_ied_exe(E05_P142 ied_p142_overcurrent.c E05_P142.c model_E05_P142)
 
 # ============================================================
 #  Line-2 Bay E06 — 150kV Transmission Line
 # ============================================================
-add_ied_exe(E06_BCU   ied_c264_bcu.c          E06_BCU.c   model_E06_BCU)
-add_ied_exe(E06_P543  ied_p543_distance.c     E06_P543.c  model_E06_P543)
-add_ied_exe(E06_P142  ied_p142_overcurrent.c  E06_P142.c  model_E06_P142)
+add_ied_exe(E06_BCU ied_c264_bcu.c E06_BCU.c model_E06_BCU)
+add_ied_exe(E06_P543 ied_p543_distance.c E06_P543.c model_E06_P543)
+add_ied_exe(E06_P142 ied_p142_overcurrent.c E06_P142.c model_E06_P142)
 
 # ============================================================
 #  Busbar Protection E00 — Station Level
 # ============================================================
-add_ied_exe(E00_P746  ied_p746_busbar.c       E00_P746.c  model_E00_P746)
+add_ied_exe(E00_P746 ied_p746_busbar.c E00_P746.c model_E00_P746)

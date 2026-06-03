@@ -1,6 +1,6 @@
 /* ============================================================
  *  ied_p643_diff.c — MiCOM P643 Transformer Differential
- *  GI 150kV ANTAM POMALAA — Transformer bays E01, E02, E03
+ *  GI 150kV A — Transformer bays E01, E02, E03
  *
  *  Protection functions:
  *    87T   Biased differential (HV vs LV winding)

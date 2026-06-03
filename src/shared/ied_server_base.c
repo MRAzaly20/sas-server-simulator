@@ -92,7 +92,7 @@ int ied_server_run(IedModel *model,
 
     printf("\n");
     printf("╔══════════════════════════════════════════════════════╗\n");
-    printf("║  GI 150kV ANTAM POMALAA — IED Server                ║\n");
+    printf("║  GI 150kV A — IED Server                ║\n");
     printf("║  %-48s  ║\n", cfg.ied_name);
     printf("║  Type: %-42s  ║\n", cfg.prot.type);
     printf("╚══════════════════════════════════════════════════════╝\n\n");

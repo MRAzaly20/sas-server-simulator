@@ -1,6 +1,6 @@
 /* ============================================================
  *  ied_c264_bcu.c — MiCOM C264 Bay Control Unit
- *  GI 150kV ANTAM POMALAA — All bays (E01–E06)
+ *  GI 150kV A — All bays (E01–E06)
  *
  *  Functions: XCBR1 (CB), CSWI1 (switch control), XSWI
  *             (disconnectors), CILO (interlocking), GGIO

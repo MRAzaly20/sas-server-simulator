@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the ANTAM POMALAA SAS CID file for IEC 61850 simulation."""
+"""Generate the A SAS CID file for IEC 61850 simulation."""
 
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
@@ -27,10 +27,10 @@ root = E("SCL", {"xmlns": NS, "xmlns:xsi": XSI})
 # ─── Header ───
 hdr = SE(root, "Header", id="ANTAM_POMALAA", version="1", revision="0",
          toolID="SAS_Generator", nameStructure="IEDName")
-SE(hdr, "Text", text="GI 150kV ANTAM POMALAA SAS Simulator")
+SE(hdr, "Text", text="GI 150kV A SAS Simulator")
 
 # ─── Substation ───
-sub = SE(root, "Substation", name="GI_ANTAM_POMALAA", desc="GI 150kV ANTAM POMALAA")
+sub = SE(root, "Substation", name="GI_ANTAM_POMALAA", desc="GI 150kV A")
 vl = SE(sub, "VoltageLevel", name="VL150kV", desc="150 kV Voltage Level")
 SE(vl, "Voltage", {"unit": "V", "multiplier": "k"}, text="150")
 
@@ -87,7 +87,7 @@ for ldi, cbn, mac_suf, appid, prio in goose_defs:
     SE(gse, "MaxTime", {"unit":"ms"}, text="1000")
 
 # ─── IED ───
-ied = SE(root, "IED", name="SASSIM", desc="GI 150kV ANTAM POMALAA SAS Simulator",
+ied = SE(root, "IED", name="SASSIM", desc="GI 150kV A SAS Simulator",
          type="SAS_Simulator", manufacturer="ANTAM_SIM", configVersion="1.0")
 
 svc = SE(ied, "Services")

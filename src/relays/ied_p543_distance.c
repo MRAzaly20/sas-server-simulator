@@ -1,6 +1,6 @@
 /* ============================================================
  *  ied_p543_distance.c — P543 Distance Protection Relay
- *  GI 150kV ANTAM POMALAA — Line-1 and Line-2 protection
+ *  GI 150kV A — Line-1 and Line-2 protection
  *
  *  Standalone executable: E05_P543.exe / E06_P543.exe
  *  Static model:          model_E05_P543 / model_E06_P543

@@ -1,6 +1,6 @@
 /* ============================================================
  *  fault_engine.h — Fault simulation engine for SAS simulator
- *  GI 150kV ANTAM POMALAA — Protection logic per ANSI functions
+ *  GI 150kV A — Protection logic per ANSI functions
  * ============================================================ */
 #ifndef FAULT_ENGINE_H
 #define FAULT_ENGINE_H

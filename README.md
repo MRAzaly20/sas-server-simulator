@@ -1,4 +1,4 @@
-# GI 150kV ANTAM POMALAA — Distributed IED Simulation Suite
+# GI 150kV — Distributed IED Simulation Suite
 
 > A real-time IEC 61850 substation simulator with 18 independent Intelligent Electronic Devices (IEDs), GOOSE peer-to-peer communication, and full protection relay logic.
 
@@ -6,7 +6,7 @@
 
 ## 1. Project Overview & Scope
 
-This project is a **software-only simulation** of a complete 150kV switchyard for the ANTAM Pomalaa Nickel Smelter in Sulawesi, Indonesia. It is designed for:
+This project is a **software-only simulation** of a complete 150kV switchyard for the a Nickel Smelter in Sulawesi, Indonesia. It is designed for:
 
 - **SAS (Substation Automation System) commissioning engineers** to train on IEC 61850 communication workflows before deploying on physical hardware.
 - **Protocol developers** to test MMS clients (SCADA HMI, gateway) against a realistic data model.
@@ -27,10 +27,10 @@ Each IED (e.g., a protection relay, a bay control unit) runs as its own **standa
 | E01 TRF-1   |     ✅     | P643 (87T Diff) |  P142 (50/51 OC)  |
 | E02 TRF-2   |     ✅     | P643 (87T Diff) |  P142 (50/51 OC)  |
 | E03 TRF-3   |     ✅     | P643 (87T Diff) |  P142 (50/51 OC)  |
-| E04 Coupler |     ✅     |       —       |  P143 (50/51 OC)  |
-| E05 Line-1  |     ✅     | P543 (21 Dist) |  P142 (50/51 OC)  |
-| E06 Line-2  |     ✅     | P543 (21 Dist) |  P142 (50/51 OC)  |
-| E00 Busbar  |     —     | P746 (87B ×3) |        —        |
+| E04 Coupler |     ✅     |        —        |  P143 (50/51 OC)  |
+| E05 Line-1  |     ✅     | P543 (21 Dist)  |  P142 (50/51 OC)  |
+| E06 Line-2  |     ✅     | P543 (21 Dist)  |  P142 (50/51 OC)  |
+| E00 Busbar  |     —      |  P746 (87B ×3)  |         —         |
 
 ---
 
@@ -46,7 +46,7 @@ Each IED (e.g., a protection relay, a bay control unit) runs as its own **standa
                          │ TCP/IP (one port per IED)
 ┌────────────────────────▼────────────────────────────────────┐
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐     │
-│  │ E01_BCU  │  │ E01_P643 │  │ E05_P543 │  │ E00_P746 │     │  
+│  │ E01_BCU  │  │ E01_P643 │  │ E05_P543 │  │ E00_P746 │     │
 │  │ :10201   │  │ :10211   │  │ :10251   │  │ :10200   │     │
 │  └──────────┘  └──────────┘  └──────────┘  └──────────┘     │
 │         ▲               ▲            ▲            │         │
@@ -155,10 +155,10 @@ sas_server/
 
 ### Prerequisites
 
-| Dependency            | Version | Purpose                                      |
-| :-------------------- | :------ | :------------------------------------------- |
+| Dependency      | Version | Purpose                                      |
+| :-------------- | :------ | :------------------------------------------- |
 | **MSYS2**       | Latest  | MinGW64 GCC toolchain for Windows            |
-| **CMake**       | ≥ 3.16 | Build system generator                       |
+| **CMake**       | ≥ 3.16  | Build system generator                       |
 | **libiec61850** | 1.5+    | IEC 61850 MMS/GOOSE/SV C library (pre-built) |
 | **Npcap**       | 1.7+    | Raw Ethernet capture for GOOSE frames        |
 
@@ -234,13 +234,13 @@ Each IED reads a JSON file at startup to configure its network identity and prot
 
 | Bay | BCU Port | Main Prot Port | Backup Prot Port |
 | :-- | :------: | :------------: | :--------------: |
-| E00 |    —    |     10200     |        —        |
-| E01 |  10201  |     10211     |      10221      |
-| E02 |  10202  |     10212     |      10222      |
-| E03 |  10203  |     10213     |      10223      |
-| E04 |  10204  |       —       |      10243      |
-| E05 |  10205  |     10251     |      10252      |
-| E06 |  10206  |     10261     |      10262      |
+| E00 |    —     |     10200      |        —         |
+| E01 |  10201   |     10211      |      10221       |
+| E02 |  10202   |     10212      |      10222       |
+| E03 |  10203   |     10213      |      10223       |
+| E04 |  10204   |       —        |      10243       |
+| E05 |  10205   |     10251      |      10252       |
+| E06 |  10206   |     10261      |      10262       |
 
 ---
 
@@ -271,13 +271,13 @@ start E03_P142.exe  ..\config\E03_TRF3\config\E03_P142.json
 
 Each IED type provides different commands:
 
-| Relay Type                       | Commands                                                        |
-| :------------------------------- | :-------------------------------------------------------------- |
-| **BCU** (C264)             | `open`, `close`, `earth on`, `earth off`, `status`    |
+| Relay Type                 | Commands                                                |
+| :------------------------- | :------------------------------------------------------ |
+| **BCU** (C264)             | `open`, `close`, `earth on`, `earth off`, `status`      |
 | **Busbar** (P746)          | `inject bb-z1`, `inject bb-z2`, `inject bb-cz`, `reset` |
-| **Distance** (P543)        | `inject ph-e 1`, `inject ph-ph 2`, `reset`                |
-| **Differential** (P643)    | `inject 87T`, `inject 87REF`, `reset`                     |
-| **Overcurrent** (P142/143) | `inject <amps>` (e.g., `inject 3000`), `reset`            |
+| **Distance** (P543)        | `inject ph-e 1`, `inject ph-ph 2`, `reset`              |
+| **Differential** (P643)    | `inject 87T`, `inject 87REF`, `reset`                   |
+| **Overcurrent** (P142/143) | `inject <amps>` (e.g., `inject 3000`), `reset`          |
 
 ### Example: End-to-End Fault Test
 
@@ -292,4 +292,4 @@ Each IED type provides different commands:
 
 ## License
 
-This simulator is built on top of [libiec61850](https://github.com/mz-automation/libiec61850) (GPLv3). The simulation application logic is proprietary to the GI 150kV ANTAM POMALAA project.
+This simulator is built on top of [libiec61850](https://github.com/mz-automation/libiec61850) (GPLv3). The simulation application logic is proprietary to the GI 150kV A project.

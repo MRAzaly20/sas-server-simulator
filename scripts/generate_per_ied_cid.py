@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate individual CID files per IED for GI 150kV ANTAM POMALAA.
+"""Generate individual CID files per IED for GI 150kV A.
 
 Each IED gets its own CID with:
   - Unique IED name and IP address
@@ -358,7 +358,7 @@ def build_ied_cid(ied_name, ip, port, bay_id, bay_desc, ld_builder):
     # Header
     hdr = SE(root, "Header", id=f"CID_{ied_name}", version="1", revision="0",
              toolID="SAS_Generator", nameStructure="IEDName")
-    SE(hdr, "Text", text=f"GI 150kV ANTAM POMALAA — {ied_name}")
+    SE(hdr, "Text", text=f"GI 150kV A — {ied_name}")
 
     # Communication
     comm = SE(root, "Communication")

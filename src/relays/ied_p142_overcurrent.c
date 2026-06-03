@@ -1,6 +1,6 @@
 /* ============================================================
  *  ied_p142_overcurrent.c — MiCOM P142/P143 Overcurrent Relay
- *  GI 150kV ANTAM POMALAA — All bays backup protection
+ *  GI 150kV A — All bays backup protection
  *
  *  Protection functions:
  *    50   Instantaneous phase overcurrent
