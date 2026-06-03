@@ -1,6 +1,6 @@
 /* ============================================================
  *  ied_config.h — JSON configuration loader for per-IED executables
- *  GI 150kV A — Multi-executable IED architecture
+ *  GI 150kV — Multi-executable IED architecture
  * ============================================================ */
 #ifndef IED_CONFIG_H
 #define IED_CONFIG_H

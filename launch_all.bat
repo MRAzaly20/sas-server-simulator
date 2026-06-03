@@ -1,14 +1,14 @@
 @echo off
 REM ============================================================
 REM  launch_all.bat — Start all 18 IED processes
-REM  GI 150kV A — Distributed IED Simulation Suite
+REM  GI 150kV — Distributed IED Simulation Suite
 REM  Run from build_ied/ directory (where .exe files are built)
 REM  Requires: Administrator privileges (for Npcap/GOOSE)
 REM ============================================================
 
 echo.
 echo =====================================================
-echo  GI 150kV A — Launching 18 IED Servers
+echo  GI 150kV — Launching 18 IED Servers
 echo =====================================================
 echo.
 

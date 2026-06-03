@@ -1,6 +1,6 @@
 /* ============================================================
  *  sas_server_distributed.c — Multi-IED MMS + GOOSE Server
- *  GI 150kV A — 18 IED instances + GOOSE pub/sub
+ *  GI 150kV — 18 IED instances + GOOSE pub/sub
  *
  *  Usage:
  *    sas_distributed.exe [goose_interface]
@@ -98,7 +98,7 @@ static void console_reader_thread(void *param) {
 
     printf("\n");
     printf("╔══════════════════════════════════════════════════════╗\n");
-    printf("║  GI 150kV A — Distributed SAS Simulator ║\n");
+    printf("║  GI 150kV — Distributed SAS Simulator ║\n");
     printf("║  %2d IEDs | MMS + GOOSE Pub/Sub active              ║\n", (int)NUM_IEDS);
     printf("║  Type 'help' for commands, 'quit' to exit           ║\n");
     printf("╚══════════════════════════════════════════════════════╝\n");
@@ -135,7 +135,7 @@ int main(int argc, char **argv) {
     const char *goose_interface = (argc > 1) ? argv[1] : NULL;
 
     printf("═══════════════════════════════════════════════════════\n");
-    printf("  GI 150kV A — Distributed SAS Simulator\n");
+    printf("  GI 150kV — Distributed SAS Simulator\n");
     printf("  %d IED instances (multi-threaded MMS servers)\n", (int)NUM_IEDS);
     if (goose_interface)
         printf("  GOOSE interface: %s\n", goose_interface);

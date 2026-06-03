@@ -1,5 +1,5 @@
 /* ============================================================
- *  sas_server.c — IEC 61850 MMS Server for GI 150kV A
+ *  sas_server.c — IEC 61850 MMS Server for GI 150kV
  *  Simulates 9 bays / 25 Logical Devices with fault injection
  * ============================================================ */
 #include "iec61850_server.h"
@@ -57,7 +57,7 @@ static void console_reader_thread(void *param) {
 
     printf("\n");
     printf("╔══════════════════════════════════════════════════╗\n");
-    printf("║  GI 150kV A — SAS Fault Simulator   ║\n");
+    printf("║  GI 150kV — SAS Fault Simulator   ║\n");
     printf("║  Type 'help' for commands, 'quit' to exit       ║\n");
     printf("╚══════════════════════════════════════════════════╝\n");
     printf("\nSAS> ");
@@ -94,7 +94,7 @@ int main(int argc, char **argv) {
     if (argc > 2) gooseIf = argv[2];
 
     printf("═══════════════════════════════════════════════════\n");
-    printf("  GI 150kV A — SAS Simulator Server\n");
+    printf("  GI 150kV — SAS Simulator Server\n");
     printf("  IEC 61850 MMS Server + Fault Simulation Engine\n");
     printf("═══════════════════════════════════════════════════\n\n");
 

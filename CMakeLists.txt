@@ -1,6 +1,6 @@
 # ============================================================
 #  CMakeLists.txt — Multi-executable IED build system
-#  GI 150kV A — 18 per-IED standalone executables
+#  GI 150kV — 18 per-IED standalone executables
 #
 #  Build from MSYS2 MinGW64:
 #    mkdir build_ied && cd build_ied

@@ -292,4 +292,4 @@ Each IED type provides different commands:
 
 ## License
 
-This simulator is built on top of [libiec61850](https://github.com/mz-automation/libiec61850) (GPLv3). The simulation application logic is proprietary to the GI 150kV A project.
+This simulator is built on top of [libiec61850](https://github.com/mz-automation/libiec61850) (GPLv3). The simulation application logic is proprietary to the GI 150kV project.

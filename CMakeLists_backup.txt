@@ -1,6 +1,6 @@
 # ============================================================
 #  CMakeLists.txt — Multi-executable IED build system
-#  GI 150kV A — Per-IED standalone executables
+#  GI 150kV — Per-IED standalone executables
 # ============================================================
 cmake_minimum_required(VERSION 3.10)
 project(sas_ied_suite C)

@@ -4667,7 +4667,7 @@ initializeValues()
 
 model_E00_P746_E00P746Z1_LLN0_Mod_ctlModel.mmsValue = MmsValue_newIntegerFromInt32(0);
 
-model_E00_P746_E00P746Z1_LLN0_NamPlt_vendor.mmsValue = MmsValue_newVisibleString("ANTAM_SIM");
+model_E00_P746_E00P746Z1_LLN0_NamPlt_vendor.mmsValue = MmsValue_newVisibleString("kVSAS_SIM");
 
 model_E00_P746_E00P746Z1_LLN0_NamPlt_swRev.mmsValue = MmsValue_newVisibleString("1.0.0");
 
@@ -4677,7 +4677,7 @@ model_E00_P746_E00P746Z1_PDIF1_Op_d.mmsValue = MmsValue_newVisibleString("87B Zo
 
 model_E00_P746_E00P746Z2_LLN0_Mod_ctlModel.mmsValue = MmsValue_newIntegerFromInt32(0);
 
-model_E00_P746_E00P746Z2_LLN0_NamPlt_vendor.mmsValue = MmsValue_newVisibleString("ANTAM_SIM");
+model_E00_P746_E00P746Z2_LLN0_NamPlt_vendor.mmsValue = MmsValue_newVisibleString("kVSAS_SIM");
 
 model_E00_P746_E00P746Z2_LLN0_NamPlt_swRev.mmsValue = MmsValue_newVisibleString("1.0.0");
 
@@ -4687,7 +4687,7 @@ model_E00_P746_E00P746Z2_PDIF1_Op_d.mmsValue = MmsValue_newVisibleString("87B Zo
 
 model_E00_P746_E00P746CZ_LLN0_Mod_ctlModel.mmsValue = MmsValue_newIntegerFromInt32(0);
 
-model_E00_P746_E00P746CZ_LLN0_NamPlt_vendor.mmsValue = MmsValue_newVisibleString("ANTAM_SIM");
+model_E00_P746_E00P746CZ_LLN0_NamPlt_vendor.mmsValue = MmsValue_newVisibleString("kVSAS_SIM");
 
 model_E00_P746_E00P746CZ_LLN0_NamPlt_swRev.mmsValue = MmsValue_newVisibleString("1.0.0");
 

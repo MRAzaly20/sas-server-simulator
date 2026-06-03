@@ -1,4 +1,4 @@
-# GI 150kV A — IEC 61850 MMS Addressing & Codebase Analysis
+# GI 150kV — IEC 61850 MMS Addressing & Codebase Analysis
 
 **Line Bay Protection & Control Integration Guide**
 
@@ -6,7 +6,7 @@
 
 ## 1. Executive Summary & System Context
 
-This document provides a comprehensive technical audit of the **GI 150kV a Substation Simulator Suite**, focusing specifically on the **MMS (Manufacturing Message Specification)** addressing schema and control models for the **Line-1 (Bay E05)** and **Line-2 (Bay E06)** IEDs (Intelligent Electronic Devices).
+This document provides a comprehensive technical audit of the **GI 150kV Substation Simulator Suite**, focusing specifically on the **MMS (Manufacturing Message Specification)** addressing schema and control models for the **Line-1 (Bay E05)** and **Line-2 (Bay E06)** IEDs (Intelligent Electronic Devices).
 
 The simulation suite runs as a fully distributed system on local or station networks. Each IED operates as an independent compiled process containing:
 

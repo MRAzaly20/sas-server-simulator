@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Header id="CID_E01_BCU" version="1" revision="0" toolID="SAS_Generator" nameStructure="IEDName">
-    <Text>GI 150kV A — E01_BCU</Text>
+    <Text>GI 150kV — E01_BCU</Text>
   </Header>
   <Communication>
     <SubNetwork name="StationBus" type="8-MMS" desc="Station Bus">
@@ -28,7 +28,7 @@
       </ConnectedAP>
     </SubNetwork>
   </Communication>
-  <IED name="E01_BCU" desc="Transformer-1 E01_BCU" type="SAS_Simulator" manufacturer="ANTAM_SIM" configVersion="1.0">
+  <IED name="E01_BCU" desc="Transformer-1 E01_BCU" type="SAS_Simulator" manufacturer="kVSAS_SIM" configVersion="1.0">
     <Services>
       <DynAssociation/>
       <GetDirectory/>
@@ -68,7 +68,7 @@
             </DOI>
             <DOI name="NamPlt">
               <DAI name="vendor">
-                <Val>ANTAM_SIM</Val>
+                <Val>kVSAS_SIM</Val>
               </DAI>
               <DAI name="swRev">
                 <Val>1.0.0</Val>

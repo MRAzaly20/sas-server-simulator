@@ -1,6 +1,6 @@
 /* ============================================================
  *  fault_engine.c — Fault simulation engine implementation
- *  Implements ANSI protection logic for GI 150kV A
+ *  Implements ANSI protection logic for GI 150kV
  *  Updated: per-bay IedRef — each bay has its own IedServer refs
  * ============================================================ */
 #include "fault_engine.h"

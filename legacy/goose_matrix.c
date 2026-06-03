@@ -1,6 +1,6 @@
 /* ============================================================
  *  goose_matrix.c — GOOSE Subscriber Matrix implementation
- *  GI 150kV A — Complete inter-IED GOOSE wiring
+ *  GI 150kV — Complete inter-IED GOOSE wiring
  *
  *  Subscriber matrix (source → action):
  *

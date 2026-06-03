@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Header id="CID_E05_P142" version="1" revision="0" toolID="SAS_Generator" nameStructure="IEDName">
-    <Text>GI 150kV A — E05_P142</Text>
+    <Text>GI 150kV — E05_P142</Text>
   </Header>
   <Communication>
     <SubNetwork name="StationBus" type="8-MMS" desc="Station Bus">
@@ -18,7 +18,7 @@
       </ConnectedAP>
     </SubNetwork>
   </Communication>
-  <IED name="E05_P142" desc="Line-1 E05_P142" type="SAS_Simulator" manufacturer="ANTAM_SIM" configVersion="1.0">
+  <IED name="E05_P142" desc="Line-1 E05_P142" type="SAS_Simulator" manufacturer="kVSAS_SIM" configVersion="1.0">
     <Services>
       <DynAssociation/>
       <GetDirectory/>
@@ -54,7 +54,7 @@
             </DOI>
             <DOI name="NamPlt">
               <DAI name="vendor">
-                <Val>ANTAM_SIM</Val>
+                <Val>kVSAS_SIM</Val>
               </DAI>
               <DAI name="swRev">
                 <Val>1.0.0</Val>

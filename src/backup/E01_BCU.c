@@ -3765,7 +3765,7 @@ initializeValues()
 
 model_E01_BCU_E01BCU_LLN0_Mod_ctlModel.mmsValue = MmsValue_newIntegerFromInt32(0);
 
-model_E01_BCU_E01BCU_LLN0_NamPlt_vendor.mmsValue = MmsValue_newVisibleString("ANTAM_SIM");
+model_E01_BCU_E01BCU_LLN0_NamPlt_vendor.mmsValue = MmsValue_newVisibleString("kVSAS_SIM");
 
 model_E01_BCU_E01BCU_LLN0_NamPlt_swRev.mmsValue = MmsValue_newVisibleString("1.0.0");
 

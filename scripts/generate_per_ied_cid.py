@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate individual CID files per IED for GI 150kV A.
+"""Generate individual CID files per IED for GI 150kV.
 
 Each IED gets its own CID with:
   - Unique IED name and IP address
@@ -148,7 +148,7 @@ def add_ln0_dois(ln0, desc_text):
     doi = SE(ln0, "DOI", name="Mod")
     SE(SE(doi, "DAI", name="ctlModel"), "Val", text="status-only")
     doi2 = SE(ln0, "DOI", name="NamPlt")
-    SE(SE(doi2, "DAI", name="vendor"), "Val", text="ANTAM_SIM")
+    SE(SE(doi2, "DAI", name="vendor"), "Val", text="kVSAS_SIM")
     SE(SE(doi2, "DAI", name="swRev"), "Val", text="1.0.0")
     SE(SE(doi2, "DAI", name="d"), "Val", text=desc_text)
 
@@ -358,7 +358,7 @@ def build_ied_cid(ied_name, ip, port, bay_id, bay_desc, ld_builder):
     # Header
     hdr = SE(root, "Header", id=f"CID_{ied_name}", version="1", revision="0",
              toolID="SAS_Generator", nameStructure="IEDName")
-    SE(hdr, "Text", text=f"GI 150kV A — {ied_name}")
+    SE(hdr, "Text", text=f"GI 150kV — {ied_name}")
 
     # Communication
     comm = SE(root, "Communication")
@@ -372,7 +372,7 @@ def build_ied_cid(ied_name, ip, port, bay_id, bay_desc, ld_builder):
 
     # IED
     ied = SE(root, "IED", name=ied_name, desc=f"{bay_desc} {ied_name}",
-             type="SAS_Simulator", manufacturer="ANTAM_SIM", configVersion="1.0")
+             type="SAS_Simulator", manufacturer="kVSAS_SIM", configVersion="1.0")
     svc = SE(ied, "Services")
     for s in ["DynAssociation","GetDirectory","GetDataObjectDefinition","GetDataSetValue",
               "SetDataSetValue","DataSetDirectory","ReadWrite","GetCBValues"]:

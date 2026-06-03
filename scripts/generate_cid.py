@@ -25,12 +25,12 @@ def SE(parent, tag, attrib=None, text=None, **kw):
 root = E("SCL", {"xmlns": NS, "xmlns:xsi": XSI})
 
 # ─── Header ───
-hdr = SE(root, "Header", id="ANTAM_POMALAA", version="1", revision="0",
+hdr = SE(root, "Header", id="kVSAS", version="1", revision="0",
          toolID="SAS_Generator", nameStructure="IEDName")
-SE(hdr, "Text", text="GI 150kV A SAS Simulator")
+SE(hdr, "Text", text="GI 150kV SAS Simulator")
 
 # ─── Substation ───
-sub = SE(root, "Substation", name="GI_ANTAM_POMALAA", desc="GI 150kV A")
+sub = SE(root, "Substation", name="GI_kVSAS", desc="GI 150kV")
 vl = SE(sub, "VoltageLevel", name="VL150kV", desc="150 kV Voltage Level")
 SE(vl, "Voltage", {"unit": "V", "multiplier": "k"}, text="150")
 
@@ -87,8 +87,8 @@ for ldi, cbn, mac_suf, appid, prio in goose_defs:
     SE(gse, "MaxTime", {"unit":"ms"}, text="1000")
 
 # ─── IED ───
-ied = SE(root, "IED", name="SASSIM", desc="GI 150kV A SAS Simulator",
-         type="SAS_Simulator", manufacturer="ANTAM_SIM", configVersion="1.0")
+ied = SE(root, "IED", name="SASSIM", desc="GI 150kV SAS Simulator",
+         type="SAS_Simulator", manufacturer="kVSAS_SIM", configVersion="1.0")
 
 svc = SE(ied, "Services")
 for s in ["DynAssociation","GetDirectory","GetDataObjectDefinition","GetDataSetValue",
@@ -107,7 +107,7 @@ def add_ln0_dois(ln0, desc_text):
     doi = SE(ln0, "DOI", name="Mod")
     SE(SE(doi, "DAI", name="ctlModel"), "Val", text="status-only")
     doi2 = SE(ln0, "DOI", name="NamPlt")
-    SE(SE(doi2, "DAI", name="vendor"), "Val", text="ANTAM_SIM")
+    SE(SE(doi2, "DAI", name="vendor"), "Val", text="kVSAS_SIM")
     SE(SE(doi2, "DAI", name="swRev"), "Val", text="1.0.0")
     SE(SE(doi2, "DAI", name="d"), "Val", text=desc_text)
 
@@ -461,7 +461,7 @@ lines = pretty.split("\n")
 if lines[0].startswith("<?xml"):
     lines[0] = '<?xml version="1.0" encoding="UTF-8"?>'
 
-out_path = r"c:\goose\iec61850-client\config\antam_pomalaa.cid"
+out_path = r"c:\goose\iec61850-client\config\kVSAS.cid"
 with open(out_path, "w", encoding="utf-8") as f:
     f.write("\n".join(lines))
 

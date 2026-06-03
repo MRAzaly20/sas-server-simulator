@@ -1,6 +1,6 @@
 /* ============================================================
  *  ied_p746_busbar.c — MiCOM P746 Busbar Protection
- *  GI 150kV A — Station level E00
+ *  GI 150kV — Station level E00
  *
  *  3 zones (in one CID model with 3 logical devices):
  *    Zone 1 — Busbar section A (E01, E02, E03, E04, E05)
