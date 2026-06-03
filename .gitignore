@@ -49,3 +49,10 @@ CMakeScripts/
 Makefile
 cmake_install.cmake
 install_manifest.txt
+
+# Agent folder rules (ignore all except specific files)
+agent/*
+!agent/feature/
+agent/feature/*
+!agent/feature/IEC61850_MMS_Complete_DataType_Rules.*
+!agent/feature/IEC61850_MMS_ReadWrite_Rules.*
