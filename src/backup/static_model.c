@@ -1,0 +1,4543 @@
+/*
+ * static_model.c
+ *
+ * automatically generated from C:\goose\sas_server\ieds\E06_P543.cid
+ */
+#include "static_model.h"
+
+static void initializeValues();
+
+extern DataSet iedModelds_E06P543_LLN0_DistTrip;
+
+
+extern DataSetEntry iedModelds_E06P543_LLN0_DistTrip_fcda0;
+extern DataSetEntry iedModelds_E06P543_LLN0_DistTrip_fcda1;
+extern DataSetEntry iedModelds_E06P543_LLN0_DistTrip_fcda2;
+extern DataSetEntry iedModelds_E06P543_LLN0_DistTrip_fcda3;
+extern DataSetEntry iedModelds_E06P543_LLN0_DistTrip_fcda4;
+extern DataSetEntry iedModelds_E06P543_LLN0_DistTrip_fcda5;
+
+DataSetEntry iedModelds_E06P543_LLN0_DistTrip_fcda0 = {
+  "E06P543",
+  false,
+  "PTRC1$ST$Tr$general", 
+  -1,
+  NULL,
+  NULL,
+  &iedModelds_E06P543_LLN0_DistTrip_fcda1
+};
+
+DataSetEntry iedModelds_E06P543_LLN0_DistTrip_fcda1 = {
+  "E06P543",
+  false,
+  "PDIS1$ST$Op$general", 
+  -1,
+  NULL,
+  NULL,
+  &iedModelds_E06P543_LLN0_DistTrip_fcda2
+};
+
+DataSetEntry iedModelds_E06P543_LLN0_DistTrip_fcda2 = {
+  "E06P543",
+  false,
+  "PDIS2$ST$Op$general", 
+  -1,
+  NULL,
+  NULL,
+  &iedModelds_E06P543_LLN0_DistTrip_fcda3
+};
+
+DataSetEntry iedModelds_E06P543_LLN0_DistTrip_fcda3 = {
+  "E06P543",
+  false,
+  "PDIS3$ST$Op$general", 
+  -1,
+  NULL,
+  NULL,
+  &iedModelds_E06P543_LLN0_DistTrip_fcda4
+};
+
+DataSetEntry iedModelds_E06P543_LLN0_DistTrip_fcda4 = {
+  "E06P543",
+  false,
+  "PDIS4$ST$Op$general", 
+  -1,
+  NULL,
+  NULL,
+  &iedModelds_E06P543_LLN0_DistTrip_fcda5
+};
+
+DataSetEntry iedModelds_E06P543_LLN0_DistTrip_fcda5 = {
+  "E06P543",
+  false,
+  "RREC1$ST$Op$general", 
+  -1,
+  NULL,
+  NULL,
+  NULL
+};
+
+DataSet iedModelds_E06P543_LLN0_DistTrip = {
+  "E06P543",
+  "LLN0$DistTrip",
+  6,
+  &iedModelds_E06P543_LLN0_DistTrip_fcda0,
+  NULL
+};
+
+LogicalDevice iedModel_E06P543 = {
+    LogicalDeviceModelType,
+    "E06P543",
+    (ModelNode*) &iedModel,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_LLN0,
+    NULL
+};
+
+LogicalNode iedModel_E06P543_LLN0 = {
+    LogicalNodeModelType,
+    "LLN0",
+    (ModelNode*) &iedModel_E06P543,
+    (ModelNode*) &iedModel_E06P543_LPHD1,
+    (ModelNode*) &iedModel_E06P543_LLN0_Mod,
+};
+
+DataObject iedModel_E06P543_LLN0_Mod = {
+    DataObjectModelType,
+    "Mod",
+    (ModelNode*) &iedModel_E06P543_LLN0,
+    (ModelNode*) &iedModel_E06P543_LLN0_Beh,
+    (ModelNode*) &iedModel_E06P543_LLN0_Mod_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_LLN0_Mod_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_LLN0_Mod,
+    (ModelNode*) &iedModel_E06P543_LLN0_Mod_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LLN0_Mod_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_LLN0_Mod,
+    (ModelNode*) &iedModel_E06P543_LLN0_Mod_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LLN0_Mod_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_LLN0_Mod,
+    (ModelNode*) &iedModel_E06P543_LLN0_Mod_ctlModel,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LLN0_Mod_ctlModel = {
+    DataAttributeModelType,
+    "ctlModel",
+    (ModelNode*) &iedModel_E06P543_LLN0_Mod,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_CF,
+    IEC61850_ENUMERATED,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_LLN0_Beh = {
+    DataObjectModelType,
+    "Beh",
+    (ModelNode*) &iedModel_E06P543_LLN0,
+    (ModelNode*) &iedModel_E06P543_LLN0_Health,
+    (ModelNode*) &iedModel_E06P543_LLN0_Beh_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_LLN0_Beh_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_LLN0_Beh,
+    (ModelNode*) &iedModel_E06P543_LLN0_Beh_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LLN0_Beh_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_LLN0_Beh,
+    (ModelNode*) &iedModel_E06P543_LLN0_Beh_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LLN0_Beh_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_LLN0_Beh,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_LLN0_Health = {
+    DataObjectModelType,
+    "Health",
+    (ModelNode*) &iedModel_E06P543_LLN0,
+    (ModelNode*) &iedModel_E06P543_LLN0_NamPlt,
+    (ModelNode*) &iedModel_E06P543_LLN0_Health_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_LLN0_Health_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_LLN0_Health,
+    (ModelNode*) &iedModel_E06P543_LLN0_Health_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LLN0_Health_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_LLN0_Health,
+    (ModelNode*) &iedModel_E06P543_LLN0_Health_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LLN0_Health_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_LLN0_Health,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_LLN0_NamPlt = {
+    DataObjectModelType,
+    "NamPlt",
+    (ModelNode*) &iedModel_E06P543_LLN0,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_LLN0_NamPlt_vendor,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_LLN0_NamPlt_vendor = {
+    DataAttributeModelType,
+    "vendor",
+    (ModelNode*) &iedModel_E06P543_LLN0_NamPlt,
+    (ModelNode*) &iedModel_E06P543_LLN0_NamPlt_swRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LLN0_NamPlt_swRev = {
+    DataAttributeModelType,
+    "swRev",
+    (ModelNode*) &iedModel_E06P543_LLN0_NamPlt,
+    (ModelNode*) &iedModel_E06P543_LLN0_NamPlt_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LLN0_NamPlt_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_LLN0_NamPlt,
+    (ModelNode*) &iedModel_E06P543_LLN0_NamPlt_configRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LLN0_NamPlt_configRev = {
+    DataAttributeModelType,
+    "configRev",
+    (ModelNode*) &iedModel_E06P543_LLN0_NamPlt,
+    (ModelNode*) &iedModel_E06P543_LLN0_NamPlt_ldNs,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LLN0_NamPlt_ldNs = {
+    DataAttributeModelType,
+    "ldNs",
+    (ModelNode*) &iedModel_E06P543_LLN0_NamPlt,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_EX,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+LogicalNode iedModel_E06P543_LPHD1 = {
+    LogicalNodeModelType,
+    "LPHD1",
+    (ModelNode*) &iedModel_E06P543,
+    (ModelNode*) &iedModel_E06P543_PDIS1,
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyNam,
+};
+
+DataObject iedModel_E06P543_LPHD1_PhyNam = {
+    DataObjectModelType,
+    "PhyNam",
+    (ModelNode*) &iedModel_E06P543_LPHD1,
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyHealth,
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyNam_vendor,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_LPHD1_PhyNam_vendor = {
+    DataAttributeModelType,
+    "vendor",
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyNam,
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyNam_hwRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LPHD1_PhyNam_hwRev = {
+    DataAttributeModelType,
+    "hwRev",
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyNam,
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyNam_swRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LPHD1_PhyNam_swRev = {
+    DataAttributeModelType,
+    "swRev",
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyNam,
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyNam_serNum,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LPHD1_PhyNam_serNum = {
+    DataAttributeModelType,
+    "serNum",
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyNam,
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyNam_model,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LPHD1_PhyNam_model = {
+    DataAttributeModelType,
+    "model",
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyNam,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_LPHD1_PhyHealth = {
+    DataObjectModelType,
+    "PhyHealth",
+    (ModelNode*) &iedModel_E06P543_LPHD1,
+    (ModelNode*) &iedModel_E06P543_LPHD1_Proxy,
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyHealth_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_LPHD1_PhyHealth_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyHealth,
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyHealth_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LPHD1_PhyHealth_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyHealth,
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyHealth_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LPHD1_PhyHealth_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_LPHD1_PhyHealth,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_LPHD1_Proxy = {
+    DataObjectModelType,
+    "Proxy",
+    (ModelNode*) &iedModel_E06P543_LPHD1,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_LPHD1_Proxy_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_LPHD1_Proxy_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_LPHD1_Proxy,
+    (ModelNode*) &iedModel_E06P543_LPHD1_Proxy_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_BOOLEAN,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LPHD1_Proxy_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_LPHD1_Proxy,
+    (ModelNode*) &iedModel_E06P543_LPHD1_Proxy_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LPHD1_Proxy_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_LPHD1_Proxy,
+    (ModelNode*) &iedModel_E06P543_LPHD1_Proxy_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_LPHD1_Proxy_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_LPHD1_Proxy,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+LogicalNode iedModel_E06P543_PDIS1 = {
+    LogicalNodeModelType,
+    "PDIS1",
+    (ModelNode*) &iedModel_E06P543,
+    (ModelNode*) &iedModel_E06P543_PDIS2,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Mod,
+};
+
+DataObject iedModel_E06P543_PDIS1_Mod = {
+    DataObjectModelType,
+    "Mod",
+    (ModelNode*) &iedModel_E06P543_PDIS1,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Beh,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Mod_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS1_Mod_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Mod,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Mod_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Mod_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Mod,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Mod_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Mod_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Mod,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Mod_ctlModel,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Mod_ctlModel = {
+    DataAttributeModelType,
+    "ctlModel",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Mod,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_CF,
+    IEC61850_ENUMERATED,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS1_Beh = {
+    DataObjectModelType,
+    "Beh",
+    (ModelNode*) &iedModel_E06P543_PDIS1,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Health,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Beh_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS1_Beh_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Beh,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Beh_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Beh_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Beh,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Beh_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Beh_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Beh,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS1_Health = {
+    DataObjectModelType,
+    "Health",
+    (ModelNode*) &iedModel_E06P543_PDIS1,
+    (ModelNode*) &iedModel_E06P543_PDIS1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Health_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS1_Health_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Health,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Health_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Health_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Health,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Health_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Health_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Health,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS1_NamPlt = {
+    DataObjectModelType,
+    "NamPlt",
+    (ModelNode*) &iedModel_E06P543_PDIS1,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS1_NamPlt_vendor,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS1_NamPlt_vendor = {
+    DataAttributeModelType,
+    "vendor",
+    (ModelNode*) &iedModel_E06P543_PDIS1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS1_NamPlt_swRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_NamPlt_swRev = {
+    DataAttributeModelType,
+    "swRev",
+    (ModelNode*) &iedModel_E06P543_PDIS1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS1_NamPlt_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_NamPlt_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PDIS1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS1_NamPlt_configRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_NamPlt_configRev = {
+    DataAttributeModelType,
+    "configRev",
+    (ModelNode*) &iedModel_E06P543_PDIS1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS1_NamPlt_ldNs,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_NamPlt_ldNs = {
+    DataAttributeModelType,
+    "ldNs",
+    (ModelNode*) &iedModel_E06P543_PDIS1_NamPlt,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_EX,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS1_Op = {
+    DataObjectModelType,
+    "Op",
+    (ModelNode*) &iedModel_E06P543_PDIS1,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Op_general,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS1_Op_general = {
+    DataAttributeModelType,
+    "general",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Op_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_BOOLEAN,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Op_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Op_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Op_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Op_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Op_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Op,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS1_Str = {
+    DataObjectModelType,
+    "Str",
+    (ModelNode*) &iedModel_E06P543_PDIS1,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Str_general,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS1_Str_general = {
+    DataAttributeModelType,
+    "general",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Str_dirGeneral,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_BOOLEAN,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Str_dirGeneral = {
+    DataAttributeModelType,
+    "dirGeneral",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Str_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_ENUMERATED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Str_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Str_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Str_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS1_Str_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS1_Str_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PDIS1_Str,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+LogicalNode iedModel_E06P543_PDIS2 = {
+    LogicalNodeModelType,
+    "PDIS2",
+    (ModelNode*) &iedModel_E06P543,
+    (ModelNode*) &iedModel_E06P543_PDIS3,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Mod,
+};
+
+DataObject iedModel_E06P543_PDIS2_Mod = {
+    DataObjectModelType,
+    "Mod",
+    (ModelNode*) &iedModel_E06P543_PDIS2,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Beh,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Mod_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS2_Mod_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Mod,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Mod_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Mod_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Mod,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Mod_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Mod_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Mod,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Mod_ctlModel,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Mod_ctlModel = {
+    DataAttributeModelType,
+    "ctlModel",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Mod,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_CF,
+    IEC61850_ENUMERATED,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS2_Beh = {
+    DataObjectModelType,
+    "Beh",
+    (ModelNode*) &iedModel_E06P543_PDIS2,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Health,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Beh_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS2_Beh_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Beh,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Beh_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Beh_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Beh,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Beh_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Beh_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Beh,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS2_Health = {
+    DataObjectModelType,
+    "Health",
+    (ModelNode*) &iedModel_E06P543_PDIS2,
+    (ModelNode*) &iedModel_E06P543_PDIS2_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Health_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS2_Health_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Health,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Health_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Health_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Health,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Health_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Health_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Health,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS2_NamPlt = {
+    DataObjectModelType,
+    "NamPlt",
+    (ModelNode*) &iedModel_E06P543_PDIS2,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS2_NamPlt_vendor,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS2_NamPlt_vendor = {
+    DataAttributeModelType,
+    "vendor",
+    (ModelNode*) &iedModel_E06P543_PDIS2_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS2_NamPlt_swRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_NamPlt_swRev = {
+    DataAttributeModelType,
+    "swRev",
+    (ModelNode*) &iedModel_E06P543_PDIS2_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS2_NamPlt_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_NamPlt_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PDIS2_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS2_NamPlt_configRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_NamPlt_configRev = {
+    DataAttributeModelType,
+    "configRev",
+    (ModelNode*) &iedModel_E06P543_PDIS2_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS2_NamPlt_ldNs,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_NamPlt_ldNs = {
+    DataAttributeModelType,
+    "ldNs",
+    (ModelNode*) &iedModel_E06P543_PDIS2_NamPlt,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_EX,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS2_Op = {
+    DataObjectModelType,
+    "Op",
+    (ModelNode*) &iedModel_E06P543_PDIS2,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Op_general,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS2_Op_general = {
+    DataAttributeModelType,
+    "general",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Op_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_BOOLEAN,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Op_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Op_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Op_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Op_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Op_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Op,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS2_Str = {
+    DataObjectModelType,
+    "Str",
+    (ModelNode*) &iedModel_E06P543_PDIS2,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Str_general,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS2_Str_general = {
+    DataAttributeModelType,
+    "general",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Str_dirGeneral,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_BOOLEAN,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Str_dirGeneral = {
+    DataAttributeModelType,
+    "dirGeneral",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Str_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_ENUMERATED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Str_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Str_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Str_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS2_Str_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS2_Str_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PDIS2_Str,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+LogicalNode iedModel_E06P543_PDIS3 = {
+    LogicalNodeModelType,
+    "PDIS3",
+    (ModelNode*) &iedModel_E06P543,
+    (ModelNode*) &iedModel_E06P543_PDIS4,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Mod,
+};
+
+DataObject iedModel_E06P543_PDIS3_Mod = {
+    DataObjectModelType,
+    "Mod",
+    (ModelNode*) &iedModel_E06P543_PDIS3,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Beh,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Mod_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS3_Mod_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Mod,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Mod_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Mod_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Mod,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Mod_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Mod_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Mod,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Mod_ctlModel,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Mod_ctlModel = {
+    DataAttributeModelType,
+    "ctlModel",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Mod,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_CF,
+    IEC61850_ENUMERATED,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS3_Beh = {
+    DataObjectModelType,
+    "Beh",
+    (ModelNode*) &iedModel_E06P543_PDIS3,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Health,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Beh_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS3_Beh_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Beh,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Beh_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Beh_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Beh,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Beh_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Beh_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Beh,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS3_Health = {
+    DataObjectModelType,
+    "Health",
+    (ModelNode*) &iedModel_E06P543_PDIS3,
+    (ModelNode*) &iedModel_E06P543_PDIS3_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Health_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS3_Health_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Health,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Health_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Health_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Health,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Health_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Health_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Health,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS3_NamPlt = {
+    DataObjectModelType,
+    "NamPlt",
+    (ModelNode*) &iedModel_E06P543_PDIS3,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS3_NamPlt_vendor,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS3_NamPlt_vendor = {
+    DataAttributeModelType,
+    "vendor",
+    (ModelNode*) &iedModel_E06P543_PDIS3_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS3_NamPlt_swRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_NamPlt_swRev = {
+    DataAttributeModelType,
+    "swRev",
+    (ModelNode*) &iedModel_E06P543_PDIS3_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS3_NamPlt_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_NamPlt_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PDIS3_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS3_NamPlt_configRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_NamPlt_configRev = {
+    DataAttributeModelType,
+    "configRev",
+    (ModelNode*) &iedModel_E06P543_PDIS3_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS3_NamPlt_ldNs,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_NamPlt_ldNs = {
+    DataAttributeModelType,
+    "ldNs",
+    (ModelNode*) &iedModel_E06P543_PDIS3_NamPlt,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_EX,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS3_Op = {
+    DataObjectModelType,
+    "Op",
+    (ModelNode*) &iedModel_E06P543_PDIS3,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Op_general,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS3_Op_general = {
+    DataAttributeModelType,
+    "general",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Op_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_BOOLEAN,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Op_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Op_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Op_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Op_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Op_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Op,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS3_Str = {
+    DataObjectModelType,
+    "Str",
+    (ModelNode*) &iedModel_E06P543_PDIS3,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Str_general,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS3_Str_general = {
+    DataAttributeModelType,
+    "general",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Str_dirGeneral,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_BOOLEAN,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Str_dirGeneral = {
+    DataAttributeModelType,
+    "dirGeneral",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Str_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_ENUMERATED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Str_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Str_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Str_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS3_Str_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS3_Str_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PDIS3_Str,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+LogicalNode iedModel_E06P543_PDIS4 = {
+    LogicalNodeModelType,
+    "PDIS4",
+    (ModelNode*) &iedModel_E06P543,
+    (ModelNode*) &iedModel_E06P543_PTRC1,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Mod,
+};
+
+DataObject iedModel_E06P543_PDIS4_Mod = {
+    DataObjectModelType,
+    "Mod",
+    (ModelNode*) &iedModel_E06P543_PDIS4,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Beh,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Mod_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS4_Mod_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Mod,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Mod_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Mod_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Mod,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Mod_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Mod_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Mod,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Mod_ctlModel,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Mod_ctlModel = {
+    DataAttributeModelType,
+    "ctlModel",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Mod,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_CF,
+    IEC61850_ENUMERATED,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS4_Beh = {
+    DataObjectModelType,
+    "Beh",
+    (ModelNode*) &iedModel_E06P543_PDIS4,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Health,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Beh_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS4_Beh_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Beh,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Beh_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Beh_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Beh,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Beh_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Beh_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Beh,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS4_Health = {
+    DataObjectModelType,
+    "Health",
+    (ModelNode*) &iedModel_E06P543_PDIS4,
+    (ModelNode*) &iedModel_E06P543_PDIS4_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Health_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS4_Health_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Health,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Health_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Health_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Health,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Health_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Health_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Health,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS4_NamPlt = {
+    DataObjectModelType,
+    "NamPlt",
+    (ModelNode*) &iedModel_E06P543_PDIS4,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS4_NamPlt_vendor,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS4_NamPlt_vendor = {
+    DataAttributeModelType,
+    "vendor",
+    (ModelNode*) &iedModel_E06P543_PDIS4_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS4_NamPlt_swRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_NamPlt_swRev = {
+    DataAttributeModelType,
+    "swRev",
+    (ModelNode*) &iedModel_E06P543_PDIS4_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS4_NamPlt_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_NamPlt_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PDIS4_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS4_NamPlt_configRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_NamPlt_configRev = {
+    DataAttributeModelType,
+    "configRev",
+    (ModelNode*) &iedModel_E06P543_PDIS4_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PDIS4_NamPlt_ldNs,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_NamPlt_ldNs = {
+    DataAttributeModelType,
+    "ldNs",
+    (ModelNode*) &iedModel_E06P543_PDIS4_NamPlt,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_EX,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS4_Op = {
+    DataObjectModelType,
+    "Op",
+    (ModelNode*) &iedModel_E06P543_PDIS4,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Op_general,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS4_Op_general = {
+    DataAttributeModelType,
+    "general",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Op_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_BOOLEAN,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Op_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Op_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Op_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Op,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Op_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Op_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Op,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PDIS4_Str = {
+    DataObjectModelType,
+    "Str",
+    (ModelNode*) &iedModel_E06P543_PDIS4,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Str_general,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PDIS4_Str_general = {
+    DataAttributeModelType,
+    "general",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Str_dirGeneral,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_BOOLEAN,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Str_dirGeneral = {
+    DataAttributeModelType,
+    "dirGeneral",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Str_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_ENUMERATED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Str_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Str_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Str_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Str,
+    (ModelNode*) &iedModel_E06P543_PDIS4_Str_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PDIS4_Str_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PDIS4_Str,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+LogicalNode iedModel_E06P543_PTRC1 = {
+    LogicalNodeModelType,
+    "PTRC1",
+    (ModelNode*) &iedModel_E06P543,
+    (ModelNode*) &iedModel_E06P543_RREC1,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Mod,
+};
+
+DataObject iedModel_E06P543_PTRC1_Mod = {
+    DataObjectModelType,
+    "Mod",
+    (ModelNode*) &iedModel_E06P543_PTRC1,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Beh,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Mod_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PTRC1_Mod_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Mod,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Mod_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_Mod_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Mod,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Mod_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_Mod_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Mod,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Mod_ctlModel,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_Mod_ctlModel = {
+    DataAttributeModelType,
+    "ctlModel",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Mod,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_CF,
+    IEC61850_ENUMERATED,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PTRC1_Beh = {
+    DataObjectModelType,
+    "Beh",
+    (ModelNode*) &iedModel_E06P543_PTRC1,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Health,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Beh_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PTRC1_Beh_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Beh,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Beh_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_Beh_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Beh,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Beh_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_Beh_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Beh,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PTRC1_Health = {
+    DataObjectModelType,
+    "Health",
+    (ModelNode*) &iedModel_E06P543_PTRC1,
+    (ModelNode*) &iedModel_E06P543_PTRC1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Health_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PTRC1_Health_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Health,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Health_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_Health_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Health,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Health_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_Health_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Health,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PTRC1_NamPlt = {
+    DataObjectModelType,
+    "NamPlt",
+    (ModelNode*) &iedModel_E06P543_PTRC1,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Tr,
+    (ModelNode*) &iedModel_E06P543_PTRC1_NamPlt_vendor,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PTRC1_NamPlt_vendor = {
+    DataAttributeModelType,
+    "vendor",
+    (ModelNode*) &iedModel_E06P543_PTRC1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PTRC1_NamPlt_swRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_NamPlt_swRev = {
+    DataAttributeModelType,
+    "swRev",
+    (ModelNode*) &iedModel_E06P543_PTRC1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PTRC1_NamPlt_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_NamPlt_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PTRC1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PTRC1_NamPlt_configRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_NamPlt_configRev = {
+    DataAttributeModelType,
+    "configRev",
+    (ModelNode*) &iedModel_E06P543_PTRC1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_PTRC1_NamPlt_ldNs,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_NamPlt_ldNs = {
+    DataAttributeModelType,
+    "ldNs",
+    (ModelNode*) &iedModel_E06P543_PTRC1_NamPlt,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_EX,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_PTRC1_Tr = {
+    DataObjectModelType,
+    "Tr",
+    (ModelNode*) &iedModel_E06P543_PTRC1,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Tr_general,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_PTRC1_Tr_general = {
+    DataAttributeModelType,
+    "general",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Tr,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Tr_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_BOOLEAN,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_Tr_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Tr,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Tr_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_Tr_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Tr,
+    (ModelNode*) &iedModel_E06P543_PTRC1_Tr_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_PTRC1_Tr_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_PTRC1_Tr,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+LogicalNode iedModel_E06P543_RREC1 = {
+    LogicalNodeModelType,
+    "RREC1",
+    (ModelNode*) &iedModel_E06P543,
+    (ModelNode*) &iedModel_E06P543_RSYN1,
+    (ModelNode*) &iedModel_E06P543_RREC1_Mod,
+};
+
+DataObject iedModel_E06P543_RREC1_Mod = {
+    DataObjectModelType,
+    "Mod",
+    (ModelNode*) &iedModel_E06P543_RREC1,
+    (ModelNode*) &iedModel_E06P543_RREC1_Beh,
+    (ModelNode*) &iedModel_E06P543_RREC1_Mod_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_RREC1_Mod_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_RREC1_Mod,
+    (ModelNode*) &iedModel_E06P543_RREC1_Mod_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_Mod_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_RREC1_Mod,
+    (ModelNode*) &iedModel_E06P543_RREC1_Mod_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_Mod_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_RREC1_Mod,
+    (ModelNode*) &iedModel_E06P543_RREC1_Mod_ctlModel,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_Mod_ctlModel = {
+    DataAttributeModelType,
+    "ctlModel",
+    (ModelNode*) &iedModel_E06P543_RREC1_Mod,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_CF,
+    IEC61850_ENUMERATED,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_RREC1_Beh = {
+    DataObjectModelType,
+    "Beh",
+    (ModelNode*) &iedModel_E06P543_RREC1,
+    (ModelNode*) &iedModel_E06P543_RREC1_Health,
+    (ModelNode*) &iedModel_E06P543_RREC1_Beh_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_RREC1_Beh_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_RREC1_Beh,
+    (ModelNode*) &iedModel_E06P543_RREC1_Beh_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_Beh_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_RREC1_Beh,
+    (ModelNode*) &iedModel_E06P543_RREC1_Beh_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_Beh_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_RREC1_Beh,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_RREC1_Health = {
+    DataObjectModelType,
+    "Health",
+    (ModelNode*) &iedModel_E06P543_RREC1,
+    (ModelNode*) &iedModel_E06P543_RREC1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_RREC1_Health_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_RREC1_Health_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_RREC1_Health,
+    (ModelNode*) &iedModel_E06P543_RREC1_Health_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_Health_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_RREC1_Health,
+    (ModelNode*) &iedModel_E06P543_RREC1_Health_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_Health_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_RREC1_Health,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_RREC1_NamPlt = {
+    DataObjectModelType,
+    "NamPlt",
+    (ModelNode*) &iedModel_E06P543_RREC1,
+    (ModelNode*) &iedModel_E06P543_RREC1_Op,
+    (ModelNode*) &iedModel_E06P543_RREC1_NamPlt_vendor,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_RREC1_NamPlt_vendor = {
+    DataAttributeModelType,
+    "vendor",
+    (ModelNode*) &iedModel_E06P543_RREC1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_RREC1_NamPlt_swRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_NamPlt_swRev = {
+    DataAttributeModelType,
+    "swRev",
+    (ModelNode*) &iedModel_E06P543_RREC1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_RREC1_NamPlt_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_NamPlt_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_RREC1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_RREC1_NamPlt_configRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_NamPlt_configRev = {
+    DataAttributeModelType,
+    "configRev",
+    (ModelNode*) &iedModel_E06P543_RREC1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_RREC1_NamPlt_ldNs,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_NamPlt_ldNs = {
+    DataAttributeModelType,
+    "ldNs",
+    (ModelNode*) &iedModel_E06P543_RREC1_NamPlt,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_EX,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_RREC1_Op = {
+    DataObjectModelType,
+    "Op",
+    (ModelNode*) &iedModel_E06P543_RREC1,
+    (ModelNode*) &iedModel_E06P543_RREC1_AutoRecSt,
+    (ModelNode*) &iedModel_E06P543_RREC1_Op_general,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_RREC1_Op_general = {
+    DataAttributeModelType,
+    "general",
+    (ModelNode*) &iedModel_E06P543_RREC1_Op,
+    (ModelNode*) &iedModel_E06P543_RREC1_Op_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_BOOLEAN,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_Op_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_RREC1_Op,
+    (ModelNode*) &iedModel_E06P543_RREC1_Op_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_Op_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_RREC1_Op,
+    (ModelNode*) &iedModel_E06P543_RREC1_Op_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_Op_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_RREC1_Op,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_RREC1_AutoRecSt = {
+    DataObjectModelType,
+    "AutoRecSt",
+    (ModelNode*) &iedModel_E06P543_RREC1,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_RREC1_AutoRecSt_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_RREC1_AutoRecSt_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_RREC1_AutoRecSt,
+    (ModelNode*) &iedModel_E06P543_RREC1_AutoRecSt_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_AutoRecSt_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_RREC1_AutoRecSt,
+    (ModelNode*) &iedModel_E06P543_RREC1_AutoRecSt_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RREC1_AutoRecSt_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_RREC1_AutoRecSt,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+LogicalNode iedModel_E06P543_RSYN1 = {
+    LogicalNodeModelType,
+    "RSYN1",
+    (ModelNode*) &iedModel_E06P543,
+    (ModelNode*) &iedModel_E06P543_MMXU1,
+    (ModelNode*) &iedModel_E06P543_RSYN1_Mod,
+};
+
+DataObject iedModel_E06P543_RSYN1_Mod = {
+    DataObjectModelType,
+    "Mod",
+    (ModelNode*) &iedModel_E06P543_RSYN1,
+    (ModelNode*) &iedModel_E06P543_RSYN1_Beh,
+    (ModelNode*) &iedModel_E06P543_RSYN1_Mod_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_RSYN1_Mod_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_RSYN1_Mod,
+    (ModelNode*) &iedModel_E06P543_RSYN1_Mod_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_Mod_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_RSYN1_Mod,
+    (ModelNode*) &iedModel_E06P543_RSYN1_Mod_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_Mod_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_RSYN1_Mod,
+    (ModelNode*) &iedModel_E06P543_RSYN1_Mod_ctlModel,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_Mod_ctlModel = {
+    DataAttributeModelType,
+    "ctlModel",
+    (ModelNode*) &iedModel_E06P543_RSYN1_Mod,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_CF,
+    IEC61850_ENUMERATED,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_RSYN1_Beh = {
+    DataObjectModelType,
+    "Beh",
+    (ModelNode*) &iedModel_E06P543_RSYN1,
+    (ModelNode*) &iedModel_E06P543_RSYN1_Health,
+    (ModelNode*) &iedModel_E06P543_RSYN1_Beh_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_RSYN1_Beh_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_RSYN1_Beh,
+    (ModelNode*) &iedModel_E06P543_RSYN1_Beh_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_Beh_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_RSYN1_Beh,
+    (ModelNode*) &iedModel_E06P543_RSYN1_Beh_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_Beh_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_RSYN1_Beh,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_RSYN1_Health = {
+    DataObjectModelType,
+    "Health",
+    (ModelNode*) &iedModel_E06P543_RSYN1,
+    (ModelNode*) &iedModel_E06P543_RSYN1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_RSYN1_Health_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_RSYN1_Health_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_RSYN1_Health,
+    (ModelNode*) &iedModel_E06P543_RSYN1_Health_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_Health_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_RSYN1_Health,
+    (ModelNode*) &iedModel_E06P543_RSYN1_Health_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_Health_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_RSYN1_Health,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_RSYN1_NamPlt = {
+    DataObjectModelType,
+    "NamPlt",
+    (ModelNode*) &iedModel_E06P543_RSYN1,
+    (ModelNode*) &iedModel_E06P543_RSYN1_RsSyn,
+    (ModelNode*) &iedModel_E06P543_RSYN1_NamPlt_vendor,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_RSYN1_NamPlt_vendor = {
+    DataAttributeModelType,
+    "vendor",
+    (ModelNode*) &iedModel_E06P543_RSYN1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_RSYN1_NamPlt_swRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_NamPlt_swRev = {
+    DataAttributeModelType,
+    "swRev",
+    (ModelNode*) &iedModel_E06P543_RSYN1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_RSYN1_NamPlt_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_NamPlt_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_RSYN1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_RSYN1_NamPlt_configRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_NamPlt_configRev = {
+    DataAttributeModelType,
+    "configRev",
+    (ModelNode*) &iedModel_E06P543_RSYN1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_RSYN1_NamPlt_ldNs,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_NamPlt_ldNs = {
+    DataAttributeModelType,
+    "ldNs",
+    (ModelNode*) &iedModel_E06P543_RSYN1_NamPlt,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_EX,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_RSYN1_RsSyn = {
+    DataObjectModelType,
+    "RsSyn",
+    (ModelNode*) &iedModel_E06P543_RSYN1,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_RSYN1_RsSyn_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_RSYN1_RsSyn_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_RSYN1_RsSyn,
+    (ModelNode*) &iedModel_E06P543_RSYN1_RsSyn_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_BOOLEAN,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_RsSyn_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_RSYN1_RsSyn,
+    (ModelNode*) &iedModel_E06P543_RSYN1_RsSyn_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_RsSyn_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_RSYN1_RsSyn,
+    (ModelNode*) &iedModel_E06P543_RSYN1_RsSyn_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_RSYN1_RsSyn_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_RSYN1_RsSyn,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+LogicalNode iedModel_E06P543_MMXU1 = {
+    LogicalNodeModelType,
+    "MMXU1",
+    (ModelNode*) &iedModel_E06P543,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Mod,
+};
+
+DataObject iedModel_E06P543_MMXU1_Mod = {
+    DataObjectModelType,
+    "Mod",
+    (ModelNode*) &iedModel_E06P543_MMXU1,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Beh,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Mod_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_MMXU1_Mod_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Mod,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Mod_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_Mod_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Mod,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Mod_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_Mod_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Mod,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Mod_ctlModel,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_Mod_ctlModel = {
+    DataAttributeModelType,
+    "ctlModel",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Mod,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_CF,
+    IEC61850_ENUMERATED,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_MMXU1_Beh = {
+    DataObjectModelType,
+    "Beh",
+    (ModelNode*) &iedModel_E06P543_MMXU1,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Health,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Beh_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_MMXU1_Beh_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Beh,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Beh_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_Beh_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Beh,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Beh_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_Beh_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Beh,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_MMXU1_Health = {
+    DataObjectModelType,
+    "Health",
+    (ModelNode*) &iedModel_E06P543_MMXU1,
+    (ModelNode*) &iedModel_E06P543_MMXU1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Health_stVal,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_MMXU1_Health_stVal = {
+    DataAttributeModelType,
+    "stVal",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Health,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Health_q,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_INT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_Health_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Health,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Health_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_Health_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Health,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_ST,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_MMXU1_NamPlt = {
+    DataObjectModelType,
+    "NamPlt",
+    (ModelNode*) &iedModel_E06P543_MMXU1,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotW,
+    (ModelNode*) &iedModel_E06P543_MMXU1_NamPlt_vendor,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_MMXU1_NamPlt_vendor = {
+    DataAttributeModelType,
+    "vendor",
+    (ModelNode*) &iedModel_E06P543_MMXU1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_MMXU1_NamPlt_swRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_NamPlt_swRev = {
+    DataAttributeModelType,
+    "swRev",
+    (ModelNode*) &iedModel_E06P543_MMXU1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_MMXU1_NamPlt_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_NamPlt_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_MMXU1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_MMXU1_NamPlt_configRev,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_NamPlt_configRev = {
+    DataAttributeModelType,
+    "configRev",
+    (ModelNode*) &iedModel_E06P543_MMXU1_NamPlt,
+    (ModelNode*) &iedModel_E06P543_MMXU1_NamPlt_ldNs,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_NamPlt_ldNs = {
+    DataAttributeModelType,
+    "ldNs",
+    (ModelNode*) &iedModel_E06P543_MMXU1_NamPlt,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_EX,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_MMXU1_TotW = {
+    DataObjectModelType,
+    "TotW",
+    (ModelNode*) &iedModel_E06P543_MMXU1,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVAr,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotW_mag,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_MMXU1_TotW_mag = {
+    DataAttributeModelType,
+    "mag",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotW,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotW_q,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotW_mag_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_TotW_mag_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotW_mag,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_TotW_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotW,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotW_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_TotW_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotW,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotW_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_TotW_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotW,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_MMXU1_TotVAr = {
+    DataObjectModelType,
+    "TotVAr",
+    (ModelNode*) &iedModel_E06P543_MMXU1,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVA,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVAr_mag,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_MMXU1_TotVAr_mag = {
+    DataAttributeModelType,
+    "mag",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVAr,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVAr_q,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVAr_mag_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_TotVAr_mag_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVAr_mag,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_TotVAr_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVAr,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVAr_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_TotVAr_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVAr,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVAr_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_TotVAr_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVAr,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_MMXU1_TotVA = {
+    DataObjectModelType,
+    "TotVA",
+    (ModelNode*) &iedModel_E06P543_MMXU1,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Hz,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVA_mag,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_MMXU1_TotVA_mag = {
+    DataAttributeModelType,
+    "mag",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVA,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVA_q,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVA_mag_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_TotVA_mag_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVA_mag,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_TotVA_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVA,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVA_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_TotVA_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVA,
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVA_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_TotVA_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_MMXU1_TotVA,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_MMXU1_Hz = {
+    DataObjectModelType,
+    "Hz",
+    (ModelNode*) &iedModel_E06P543_MMXU1,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Hz_mag,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_MMXU1_Hz_mag = {
+    DataAttributeModelType,
+    "mag",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Hz,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Hz_q,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Hz_mag_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_Hz_mag_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Hz_mag,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_Hz_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Hz,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Hz_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_Hz_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Hz,
+    (ModelNode*) &iedModel_E06P543_MMXU1_Hz_d,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_Hz_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_MMXU1_Hz,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_MMXU1_PhV = {
+    DataObjectModelType,
+    "PhV",
+    (ModelNode*) &iedModel_E06P543_MMXU1,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsA = {
+    DataAttributeModelType,
+    "phsA",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA_cVal,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsA_cVal = {
+    DataAttributeModelType,
+    "cVal",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA_q,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA_cVal_mag,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsA_cVal_mag = {
+    DataAttributeModelType,
+    "mag",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA_cVal,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA_cVal_ang,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA_cVal_mag_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsA_cVal_mag_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA_cVal_mag,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsA_cVal_ang = {
+    DataAttributeModelType,
+    "ang",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA_cVal,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA_cVal_ang_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsA_cVal_ang_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA_cVal_ang,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsA_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsA_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsA,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsB = {
+    DataAttributeModelType,
+    "phsB",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB_cVal,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsB_cVal = {
+    DataAttributeModelType,
+    "cVal",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB_q,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB_cVal_mag,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsB_cVal_mag = {
+    DataAttributeModelType,
+    "mag",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB_cVal,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB_cVal_ang,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB_cVal_mag_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsB_cVal_mag_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB_cVal_mag,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsB_cVal_ang = {
+    DataAttributeModelType,
+    "ang",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB_cVal,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB_cVal_ang_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsB_cVal_ang_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB_cVal_ang,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsB_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsB_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsB,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsC = {
+    DataAttributeModelType,
+    "phsC",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_d,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC_cVal,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsC_cVal = {
+    DataAttributeModelType,
+    "cVal",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC_q,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC_cVal_mag,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsC_cVal_mag = {
+    DataAttributeModelType,
+    "mag",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC_cVal,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC_cVal_ang,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC_cVal_mag_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsC_cVal_mag_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC_cVal_mag,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsC_cVal_ang = {
+    DataAttributeModelType,
+    "ang",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC_cVal,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC_cVal_ang_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsC_cVal_ang_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC_cVal_ang,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsC_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC,
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_phsC_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV_phsC,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_PhV_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_MMXU1_PhV,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+DataObject iedModel_E06P543_MMXU1_A = {
+    DataObjectModelType,
+    "A",
+    (ModelNode*) &iedModel_E06P543_MMXU1,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA,
+    0,
+    -1
+};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsA = {
+    DataAttributeModelType,
+    "phsA",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA_cVal,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsA_cVal = {
+    DataAttributeModelType,
+    "cVal",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA_q,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA_cVal_mag,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsA_cVal_mag = {
+    DataAttributeModelType,
+    "mag",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA_cVal,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA_cVal_ang,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA_cVal_mag_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsA_cVal_mag_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA_cVal_mag,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsA_cVal_ang = {
+    DataAttributeModelType,
+    "ang",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA_cVal,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA_cVal_ang_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsA_cVal_ang_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA_cVal_ang,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsA_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsA_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsA,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsB = {
+    DataAttributeModelType,
+    "phsB",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB_cVal,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsB_cVal = {
+    DataAttributeModelType,
+    "cVal",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB_q,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB_cVal_mag,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsB_cVal_mag = {
+    DataAttributeModelType,
+    "mag",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB_cVal,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB_cVal_ang,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB_cVal_mag_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsB_cVal_mag_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB_cVal_mag,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsB_cVal_ang = {
+    DataAttributeModelType,
+    "ang",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB_cVal,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB_cVal_ang_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsB_cVal_ang_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB_cVal_ang,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsB_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsB_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsB,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsC = {
+    DataAttributeModelType,
+    "phsC",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_d,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC_cVal,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsC_cVal = {
+    DataAttributeModelType,
+    "cVal",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC_q,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC_cVal_mag,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsC_cVal_mag = {
+    DataAttributeModelType,
+    "mag",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC_cVal,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC_cVal_ang,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC_cVal_mag_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsC_cVal_mag_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC_cVal_mag,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsC_cVal_ang = {
+    DataAttributeModelType,
+    "ang",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC_cVal,
+    NULL,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC_cVal_ang_f,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_CONSTRUCTED,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsC_cVal_ang_f = {
+    DataAttributeModelType,
+    "f",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC_cVal_ang,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_FLOAT32,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsC_q = {
+    DataAttributeModelType,
+    "q",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC,
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC_t,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_QUALITY,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_phsC_t = {
+    DataAttributeModelType,
+    "t",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A_phsC,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_MX,
+    IEC61850_TIMESTAMP,
+    0,
+    NULL,
+    0};
+
+DataAttribute iedModel_E06P543_MMXU1_A_d = {
+    DataAttributeModelType,
+    "d",
+    (ModelNode*) &iedModel_E06P543_MMXU1_A,
+    NULL,
+    NULL,
+    0,
+    -1,
+    IEC61850_FC_DC,
+    IEC61850_VISIBLE_STRING_255,
+    0,
+    NULL,
+    0};
+
+extern ReportControlBlock iedModel_E06P543_LLN0_report0;
+extern ReportControlBlock iedModel_E06P543_LLN0_report1;
+
+ReportControlBlock iedModel_E06P543_LLN0_report0 = {&iedModel_E06P543_LLN0, "DistBRCB01", "E06_P543/E06P543/LLN0.DistBRCB", true, "DistTrip", 1, 19, 255, 0, 0, {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, &iedModel_E06P543_LLN0_report1};
+ReportControlBlock iedModel_E06P543_LLN0_report1 = {&iedModel_E06P543_LLN0, "DistBRCB02", "E06_P543/E06P543/LLN0.DistBRCB", true, "DistTrip", 1, 19, 255, 0, 0, {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, NULL};
+
+
+
+
+
+
+
+IedModel iedModel = {
+    "E06_P543",
+    &iedModel_E06P543,
+    &iedModelds_E06P543_LLN0_DistTrip,
+    &iedModel_E06P543_LLN0_report0,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    initializeValues
+};
+
+static void
+initializeValues()
+{
+
+iedModel_E06P543_LLN0_Mod_ctlModel.mmsValue = MmsValue_newIntegerFromInt32(0);
+
+iedModel_E06P543_LLN0_NamPlt_vendor.mmsValue = MmsValue_newVisibleString("ANTAM_SIM");
+
+iedModel_E06P543_LLN0_NamPlt_swRev.mmsValue = MmsValue_newVisibleString("1.0.0");
+
+iedModel_E06P543_LLN0_NamPlt_d.mmsValue = MmsValue_newVisibleString("Line-2 Distance + Auto-Reclose (P543)");
+
+iedModel_E06P543_PDIS1_Op_d.mmsValue = MmsValue_newVisibleString("Zone 1 Distance Protection");
+
+iedModel_E06P543_PDIS2_Op_d.mmsValue = MmsValue_newVisibleString("Zone 2 Distance Protection");
+
+iedModel_E06P543_PDIS3_Op_d.mmsValue = MmsValue_newVisibleString("Zone 3 Distance Protection");
+
+iedModel_E06P543_PDIS4_Op_d.mmsValue = MmsValue_newVisibleString("Zone 4 Distance Protection");
+}

@@ -1,0 +1,37 @@
+{
+  "ied_name": "E02_BCU",
+  "port": 10202,
+  "goose_subscriptions": [
+    {
+      "gocbRef": "E00_P746E00P746Z1/LLN0$GO$gcbE00P746Z1",
+      "appId": 4113,
+      "action": "intertrip_open_cb"
+    },
+    {
+      "gocbRef": "E00_P746E00P746Z2/LLN0$GO$gcbE00P746Z2",
+      "appId": 4114,
+      "action": "intertrip_open_cb"
+    },
+    {
+      "gocbRef": "E02_P643E02P643/LLN0$GO$gcbTrip",
+      "appId": 4641,
+      "action": "intertrip_open_cb"
+    },
+    {
+      "gocbRef": "E02_P142E02P142HV/LLN0$GO$gcbTrip",
+      "appId": 4657,
+      "action": "intertrip_open_cb"
+    },
+    {
+      "gocbRef": "E04_BCUE04BCU/LLN0$GO$gcbE04BCU",
+      "appId": 5137,
+      "action": "coupler_status"
+    }
+  ],
+  "ip": "127.0.0.1",
+  "goose_interface": "4",
+  "protection": {
+    "type": "BCU",
+    "interlock_mode": "goose"
+  }
+}

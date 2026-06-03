@@ -1,0 +1,16 @@
+{
+  "ied_name": "E06_P142",
+  "ip": "127.0.0.1",
+  "port": 10262,
+  "goose_interface": "4",
+  "protection": {
+    "type": "overcurrent",
+    "i_pickup_a": 800.0,
+    "curve_type": 1,
+    "time_dial": 0.1,
+    "nominal_v_kv": 86.6,
+    "nominal_i_a": 200.0,
+    "nominal_freq": 50.0
+  },
+  "goose_subscriptions": []
+}

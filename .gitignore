@@ -1,0 +1,51 @@
+# Build directories
+build/
+build_dist/
+build_ied/
+
+# C/C++ build artifacts
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+*.out
+*.app
+
+# Visual Studio / IDEs
+.vscode/
+.idea/
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
+
+# CMake temporary files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+install_manifest.txt

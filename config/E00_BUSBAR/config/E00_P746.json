@@ -1,0 +1,13 @@
+{
+  "ied_name": "E00_P746",
+  "ip": "127.0.0.1",
+  "port": 10200,
+  "goose_interface": "4",
+  "protection": {
+    "type": "busbar",
+    "nominal_v_kv": 86.6,
+    "nominal_i_a": 200.0,
+    "nominal_freq": 50.0
+  },
+  "goose_subscriptions": []
+}

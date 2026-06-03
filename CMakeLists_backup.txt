@@ -1,0 +1,93 @@
+# ============================================================
+#  CMakeLists.txt — Multi-executable IED build system
+#  GI 150kV ANTAM POMALAA — Per-IED standalone executables
+# ============================================================
+cmake_minimum_required(VERSION 3.10)
+project(sas_ied_suite C)
+
+# ---- Paths ----
+set(LIB_DIR    "c:/goose/libiec61850")
+set(LIB_BUILD  "${LIB_DIR}/builds")
+set(IED_DIR    "${CMAKE_SOURCE_DIR}/ieds")
+
+# ---- Include paths ----
+include_directories(
+    ${CMAKE_SOURCE_DIR}
+    ${IED_DIR}
+    ${LIB_DIR}/src/iec61850/inc
+    ${LIB_DIR}/src/mms/inc
+    ${LIB_DIR}/src/common/inc
+    ${LIB_DIR}/src/goose
+    ${LIB_DIR}/hal/inc
+    ${LIB_BUILD}/config
+    ${LIB_DIR}/src/mms/inc_private
+    ${LIB_DIR}/src/iec61850/inc_private
+)
+
+# ---- Link library ----
+find_library(LIBIEC61850 NAMES iec61850 libiec61850
+    PATHS ${LIB_BUILD}/lib ${LIB_BUILD}
+)
+if(NOT LIBIEC61850)
+    message(FATAL_ERROR "libiec61850 not found in ${LIB_BUILD}")
+endif()
+
+# ---- Shared base sources (linked into every executable) ----
+set(BASE_SOURCES
+    ied_server_base.c
+    ied_config.c
+    goose_handler.c
+    cJSON.c
+)
+
+# ---- Platform libraries ----
+if(WIN32)
+    set(PLAT_LIBS ws2_32 iphlpapi)
+else()
+    set(PLAT_LIBS pthread)
+endif()
+
+# ============================================================
+#  Per-IED executable targets
+# ============================================================
+# Format: add_ied_exe(<target_name> <ied_main.c> <static_model.c> <model_prefix_define>)
+
+function(add_ied_exe TARGET_NAME MAIN_SRC MODEL_SRC MODEL_PREFIX)
+    add_executable(${TARGET_NAME}
+        ${MAIN_SRC}
+        ${MODEL_SRC}
+        ${BASE_SOURCES}
+    )
+    target_compile_definitions(${TARGET_NAME} PRIVATE MODEL_EXTERN=${MODEL_PREFIX})
+    target_link_libraries(${TARGET_NAME} ${LIBIEC61850} ${PLAT_LIBS})
+endfunction()
+
+# ---- Line Bay E05: P543 Distance Relay ----
+add_ied_exe(E05_P543  ied_p543_distance.c  ${IED_DIR}/E05_P543.c  model_E05_P543)
+
+# ---- Line Bay E06: P543 Distance Relay ----
+add_ied_exe(E06_P543  ied_p543_distance.c  ${IED_DIR}/E06_P543.c  model_E06_P543)
+
+# ============================================================
+# Future targets (uncomment as IED types are implemented):
+# ============================================================
+# # Transformer Bays E01-E03: BCU + P643 + P142
+# add_ied_exe(E01_BCU   ied_c264_bcu.c       ${IED_DIR}/E01_BCU.c   model_E01_BCU)
+# add_ied_exe(E01_P643  ied_p643_diff.c      ${IED_DIR}/E01_P643.c  model_E01_P643)
+# add_ied_exe(E01_P142  ied_p142_overcurrent.c ${IED_DIR}/E01_P142.c model_E01_P142)
+# add_ied_exe(E02_BCU   ied_c264_bcu.c       ${IED_DIR}/E02_BCU.c   model_E02_BCU)
+# add_ied_exe(E02_P643  ied_p643_diff.c      ${IED_DIR}/E02_P643.c  model_E02_P643)
+# add_ied_exe(E02_P142  ied_p142_overcurrent.c ${IED_DIR}/E02_P142.c model_E02_P142)
+# add_ied_exe(E03_BCU   ied_c264_bcu.c       ${IED_DIR}/E03_BCU.c   model_E03_BCU)
+# add_ied_exe(E03_P643  ied_p643_diff.c      ${IED_DIR}/E03_P643.c  model_E03_P643)
+# add_ied_exe(E03_P142  ied_p142_overcurrent.c ${IED_DIR}/E03_P142.c model_E03_P142)
+# # Coupler Bay E04
+# add_ied_exe(E04_BCU   ied_c264_bcu.c       ${IED_DIR}/E04_BCU.c   model_E04_BCU)
+# add_ied_exe(E04_P143  ied_p142_overcurrent.c ${IED_DIR}/E04_P143.c model_E04_P143)
+# # Line Bays E05-E06: BCU + P142
+# add_ied_exe(E05_BCU   ied_c264_bcu.c       ${IED_DIR}/E05_BCU.c   model_E05_BCU)
+# add_ied_exe(E05_P142  ied_p142_overcurrent.c ${IED_DIR}/E05_P142.c model_E05_P142)
+# add_ied_exe(E06_BCU   ied_c264_bcu.c       ${IED_DIR}/E06_BCU.c   model_E06_BCU)
+# add_ied_exe(E06_P142  ied_p142_overcurrent.c ${IED_DIR}/E06_P142.c model_E06_P142)
+# # Busbar Protection E00
+# add_ied_exe(E00_P746  ied_p746_busbar.c    ${IED_DIR}/E00_P746.c  model_E00_P746)

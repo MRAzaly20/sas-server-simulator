@@ -1,0 +1,14 @@
+{
+  "ied_name": "E03_P643",
+  "ip": "127.0.0.1",
+  "port": 10213,
+  "goose_interface": "4",
+  "protection": {
+    "type": "differential",
+    "diff_threshold": 0.2,
+    "nominal_v_kv": 86.6,
+    "nominal_i_a": 200.0,
+    "nominal_freq": 50.0
+  },
+  "goose_subscriptions": []
+}

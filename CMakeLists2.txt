@@ -1,0 +1,54 @@
+cmake_minimum_required(VERSION 3.16)
+project(sas_server C)
+
+set(CMAKE_C_STANDARD 11)
+
+# ---------- libiec61850 (pre-built) ----------
+set(LIB61850_ROOT "${CMAKE_CURRENT_LIST_DIR}/../libiec61850")
+
+set(LIB61850_INCLUDE_DIRS
+  ${LIB61850_ROOT}/src/iec61850/inc
+  ${LIB61850_ROOT}/src/iec61850/inc_private
+  ${LIB61850_ROOT}/src/mms/inc
+  ${LIB61850_ROOT}/src/mms/inc_private
+  ${LIB61850_ROOT}/src/mms/iso_mms/asn1c
+  ${LIB61850_ROOT}/src/common/inc
+  ${LIB61850_ROOT}/src/logging
+  ${LIB61850_ROOT}/src/goose
+  ${LIB61850_ROOT}/src/sampled_values
+  ${LIB61850_ROOT}/src/r_session
+  ${LIB61850_ROOT}/hal/inc
+  ${LIB61850_ROOT}/builds/config
+)
+
+set(LIB61850_LIBRARIES
+  ${LIB61850_ROOT}/builds/src/libiec61850.a
+  ${LIB61850_ROOT}/builds/hal/libhal.a
+)
+
+# ---------- Sources ----------
+set(SOURCES
+  sas_server.c
+  fault_engine.c
+  static_model.c
+  goose_matrix.c
+)
+
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+target_include_directories(${PROJECT_NAME} PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}
+  ${LIB61850_INCLUDE_DIRS}
+)
+
+target_link_directories(${PROJECT_NAME} PRIVATE
+  ${LIB61850_ROOT}/third_party/winpcap/Lib/x64
+)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE
+  ${LIB61850_LIBRARIES}
+  ws2_32
+  wpcap
+  Packet
+  Iphlpapi
+)

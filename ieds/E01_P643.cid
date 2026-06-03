@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Header id="CID_E01_P643" version="1" revision="0" toolID="SAS_Generator" nameStructure="IEDName">
+    <Text>GI 150kV ANTAM POMALAA — E01_P643</Text>
+  </Header>
+  <Communication>
+    <SubNetwork name="StationBus" type="8-MMS" desc="Station Bus">
+      <BitRate unit="b/s" multiplier="M">100</BitRate>
+      <ConnectedAP iedName="E01_P643" apName="AP1">
+        <Address>
+          <P type="IP">10.0.1.2</P>
+          <P type="IP-SUBNET">255.255.255.0</P>
+          <P type="IP-GATEWAY">10.0.0.254</P>
+          <P type="OSI-TSEL">0001</P>
+          <P type="OSI-PSEL">00000001</P>
+          <P type="OSI-SSEL">0001</P>
+        </Address>
+        <GSE ldInst="E01P643" cbName="gcbTrip">
+          <Address>
+            <P type="VLAN-ID">1</P>
+            <P type="VLAN-PRIORITY">4</P>
+            <P type="MAC-Address">01-0C-CD-01-01-21</P>
+            <P type="APPID">1121</P>
+          </Address>
+          <MinTime unit="ms">4</MinTime>
+          <MaxTime unit="ms">1000</MaxTime>
+        </GSE>
+      </ConnectedAP>
+    </SubNetwork>
+  </Communication>
+  <IED name="E01_P643" desc="Transformer-1 E01_P643" type="SAS_Simulator" manufacturer="ANTAM_SIM" configVersion="1.0">
+    <Services>
+      <DynAssociation/>
+      <GetDirectory/>
+      <GetDataObjectDefinition/>
+      <GetDataSetValue/>
+      <SetDataSetValue/>
+      <DataSetDirectory/>
+      <ReadWrite/>
+      <GetCBValues/>
+      <GOOSE max="10"/>
+      <ConfReportControl/>
+      <FileHandling/>
+    </Services>
+    <AccessPoint name="AP1" desc="Primary Access Point">
+      <Server timeout="30">
+        <Authentication none="true"/>
+        <LDevice inst="E01P643" desc="Transformer-1 Differential Protection (P643)">
+          <LN0 lnClass="LLN0" lnType="LLN0_PROT" inst="">
+            <DataSet name="DiffTrip">
+              <FCDA ldInst="E01P643" lnClass="PTRC" fc="ST" lnInst="1" doName="Tr" daName="general"/>
+              <FCDA ldInst="E01P643" lnClass="PDIF" fc="ST" lnInst="1" doName="Op" daName="general"/>
+            </DataSet>
+            <ReportControl name="DiffBRCB" confRev="1" datSet="DiffTrip" rptID="E01_P643/E01P643/LLN0.DiffBRCB" buffered="true" intgPd="0" bufTime="0">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="false" gi="true"/>
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true"/>
+              <RptEnabled max="2"/>
+            </ReportControl>
+            <GSEControl appID="E01P643" name="gcbTrip" type="GOOSE" datSet="DiffTrip" confRev="1"/>
+            <DOI name="Mod">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="NamPlt">
+              <DAI name="vendor">
+                <Val>ANTAM_SIM</Val>
+              </DAI>
+              <DAI name="swRev">
+                <Val>1.0.0</Val>
+              </DAI>
+              <DAI name="d">
+                <Val>Transformer-1 Differential Protection (P643)</Val>
+              </DAI>
+            </DOI>
+          </LN0>
+          <LN lnClass="LPHD" lnType="LPHD1" inst="1" prefix=""/>
+          <LN lnClass="PDIF" lnType="PDIF1" inst="1" prefix=""/>
+          <LN lnClass="PTRC" lnType="PTRC1" inst="1" prefix=""/>
+          <LN lnClass="MMXU" lnType="MMXU1" inst="1" prefix=""/>
+        </LDevice>
+      </Server>
+    </AccessPoint>
+  </IED>
+  <DataTypeTemplates>
+    <LNodeType id="LLN0_BCU" lnClass="LLN0">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+    </LNodeType>
+    <LNodeType id="LLN0_PROT" lnClass="LLN0">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+    </LNodeType>
+    <LNodeType id="LLN0_MEAS" lnClass="LLN0">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+    </LNodeType>
+    <LNodeType id="LPHD1" lnClass="LPHD">
+      <DO name="PhyNam" type="DPL1"/>
+      <DO name="PhyHealth" type="INS1"/>
+      <DO name="Proxy" type="SPS1"/>
+    </LNodeType>
+    <LNodeType id="XCBR1" lnClass="XCBR">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="Pos" type="DPC1"/>
+      <DO name="BlkOpn" type="SPC1"/>
+      <DO name="BlkCls" type="SPC1"/>
+      <DO name="CBOpCap" type="INS1"/>
+    </LNodeType>
+    <LNodeType id="CSWI1" lnClass="CSWI">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="Pos" type="DPC1"/>
+    </LNodeType>
+    <LNodeType id="XSWI1" lnClass="XSWI">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="Pos" type="DPC1"/>
+    </LNodeType>
+    <LNodeType id="CILO1" lnClass="CILO">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="EnaCls" type="SPS1"/>
+      <DO name="EnaOpn" type="SPS1"/>
+    </LNodeType>
+    <LNodeType id="GGIO_BCU" lnClass="GGIO">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="Ind1" type="SPS1"/>
+      <DO name="Ind2" type="SPS1"/>
+      <DO name="Ind3" type="SPS1"/>
+      <DO name="Ind4" type="SPS1"/>
+      <DO name="SPCSO1" type="SPC1"/>
+      <DO name="SPCSO2" type="SPC1"/>
+    </LNodeType>
+    <LNodeType id="PTOC1" lnClass="PTOC">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="Op" type="ACT1"/>
+      <DO name="Str" type="ACD1"/>
+    </LNodeType>
+    <LNodeType id="PDIS1" lnClass="PDIS">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="Op" type="ACT1"/>
+      <DO name="Str" type="ACD1"/>
+    </LNodeType>
+    <LNodeType id="PDIF1" lnClass="PDIF">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="Op" type="ACT1"/>
+      <DO name="Str" type="ACD1"/>
+    </LNodeType>
+    <LNodeType id="PDIF_BB" lnClass="PDIF">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="Op" type="ACT1"/>
+    </LNodeType>
+    <LNodeType id="PTRC1" lnClass="PTRC">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="Tr" type="ACT1"/>
+    </LNodeType>
+    <LNodeType id="RREC1" lnClass="RREC">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="Op" type="ACT1"/>
+      <DO name="AutoRecSt" type="INS1"/>
+    </LNodeType>
+    <LNodeType id="RSYN1" lnClass="RSYN">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="RsSyn" type="SPS1"/>
+    </LNodeType>
+    <LNodeType id="RBRF1" lnClass="RBRF">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="OpEx" type="ACT1"/>
+      <DO name="FailMod" type="INS1"/>
+    </LNodeType>
+    <LNodeType id="MMXU1" lnClass="MMXU">
+      <DO name="Mod" type="INC1"/>
+      <DO name="Beh" type="INS1"/>
+      <DO name="Health" type="INS1"/>
+      <DO name="NamPlt" type="LPL1"/>
+      <DO name="TotW" type="MV1"/>
+      <DO name="TotVAr" type="MV1"/>
+      <DO name="TotVA" type="MV1"/>
+      <DO name="Hz" type="MV1"/>
+      <DO name="PhV" type="WYE1"/>
+      <DO name="A" type="WYE1"/>
+    </LNodeType>
+    <DOType id="INC1" cdc="INC">
+      <DA name="stVal" bType="INT32" fc="ST"/>
+      <DA name="q" bType="Quality" fc="ST"/>
+      <DA name="t" bType="Timestamp" fc="ST"/>
+      <DA name="ctlModel" bType="Enum" fc="CF" type="CtlModels"/>
+    </DOType>
+    <DOType id="INS1" cdc="INS">
+      <DA name="stVal" bType="INT32" fc="ST"/>
+      <DA name="q" bType="Quality" fc="ST"/>
+      <DA name="t" bType="Timestamp" fc="ST"/>
+    </DOType>
+    <DOType id="SPS1" cdc="SPS">
+      <DA name="stVal" bType="BOOLEAN" fc="ST"/>
+      <DA name="q" bType="Quality" fc="ST"/>
+      <DA name="t" bType="Timestamp" fc="ST"/>
+      <DA name="d" bType="VisString255" fc="DC"/>
+    </DOType>
+    <DOType id="SPC1" cdc="SPC">
+      <DA name="stVal" bType="BOOLEAN" fc="ST"/>
+      <DA name="q" bType="Quality" fc="ST"/>
+      <DA name="t" bType="Timestamp" fc="ST"/>
+      <DA name="ctlModel" bType="Enum" fc="CF" type="CtlModels">
+        <Val>sbo-with-normal-security</Val>
+      </DA>
+      <DA name="SBO" bType="VisString129" fc="CO"/>
+      <DA name="SBOw" bType="Struct" fc="CO" type="SPCOperate"/>
+      <DA name="Oper" bType="Struct" fc="CO" type="SPCOperate"/>
+      <DA name="Cancel" bType="Struct" fc="CO" type="SPCOperate"/>
+      <DA name="d" bType="VisString255" fc="DC"/>
+    </DOType>
+    <DOType id="DPC1" cdc="DPC">
+      <DA name="stVal" bType="Dbpos" fc="ST"/>
+      <DA name="q" bType="Quality" fc="ST"/>
+      <DA name="t" bType="Timestamp" fc="ST"/>
+      <DA name="ctlModel" bType="Enum" fc="CF" type="CtlModels">
+        <Val>sbo-with-normal-security</Val>
+      </DA>
+      <DA name="SBO" bType="VisString129" fc="CO"/>
+      <DA name="SBOw" bType="Struct" fc="CO" type="DPCOperate"/>
+      <DA name="Oper" bType="Struct" fc="CO" type="DPCOperate"/>
+      <DA name="Cancel" bType="Struct" fc="CO" type="DPCOperate"/>
+      <DA name="d" bType="VisString255" fc="DC"/>
+    </DOType>
+    <DOType id="MV1" cdc="MV">
+      <DA name="mag" bType="Struct" fc="MX" type="AnalogueValue"/>
+      <DA name="q" bType="Quality" fc="MX"/>
+      <DA name="t" bType="Timestamp" fc="MX"/>
+      <DA name="d" bType="VisString255" fc="DC"/>
+    </DOType>
+    <DOType id="WYE1" cdc="WYE">
+      <DA name="phsA" bType="Struct" fc="MX" type="CMV1"/>
+      <DA name="phsB" bType="Struct" fc="MX" type="CMV1"/>
+      <DA name="phsC" bType="Struct" fc="MX" type="CMV1"/>
+      <DA name="d" bType="VisString255" fc="DC"/>
+    </DOType>
+    <DOType id="ACT1" cdc="ACT">
+      <DA name="general" bType="BOOLEAN" fc="ST"/>
+      <DA name="q" bType="Quality" fc="ST"/>
+      <DA name="t" bType="Timestamp" fc="ST"/>
+      <DA name="d" bType="VisString255" fc="DC"/>
+    </DOType>
+    <DOType id="ACD1" cdc="ACD">
+      <DA name="general" bType="BOOLEAN" fc="ST"/>
+      <DA name="dirGeneral" bType="Enum" fc="ST" type="FaultDirection"/>
+      <DA name="q" bType="Quality" fc="ST"/>
+      <DA name="t" bType="Timestamp" fc="ST"/>
+      <DA name="d" bType="VisString255" fc="DC"/>
+    </DOType>
+    <DOType id="LPL1" cdc="LPL">
+      <DA name="vendor" bType="VisString255" fc="DC"/>
+      <DA name="swRev" bType="VisString255" fc="DC"/>
+      <DA name="d" bType="VisString255" fc="DC"/>
+      <DA name="configRev" bType="VisString255" fc="DC"/>
+      <DA name="ldNs" bType="VisString255" fc="EX"/>
+    </DOType>
+    <DOType id="DPL1" cdc="DPL">
+      <DA name="vendor" bType="VisString255" fc="DC"/>
+      <DA name="hwRev" bType="VisString255" fc="DC"/>
+      <DA name="swRev" bType="VisString255" fc="DC"/>
+      <DA name="serNum" bType="VisString255" fc="DC"/>
+      <DA name="model" bType="VisString255" fc="DC"/>
+    </DOType>
+    <DAType id="AnalogueValue">
+      <BDA name="f" bType="FLOAT32"/>
+    </DAType>
+    <DAType id="CMV1">
+      <BDA name="cVal" bType="Struct" type="Vector1"/>
+      <BDA name="q" bType="Quality"/>
+      <BDA name="t" bType="Timestamp"/>
+    </DAType>
+    <DAType id="Vector1">
+      <BDA name="mag" bType="Struct" type="AnalogueValue"/>
+      <BDA name="ang" bType="Struct" type="AnalogueValue"/>
+    </DAType>
+    <DAType id="SPCOperate">
+      <BDA name="ctlVal" bType="BOOLEAN"/>
+      <BDA name="origin" bType="Struct" type="Originator1"/>
+      <BDA name="ctlNum" bType="INT8U"/>
+      <BDA name="T" bType="Timestamp"/>
+      <BDA name="Test" bType="BOOLEAN"/>
+      <BDA name="Check" bType="Check"/>
+    </DAType>
+    <DAType id="DPCOperate">
+      <BDA name="ctlVal" bType="BOOLEAN"/>
+      <BDA name="origin" bType="Struct" type="Originator1"/>
+      <BDA name="ctlNum" bType="INT8U"/>
+      <BDA name="T" bType="Timestamp"/>
+      <BDA name="Test" bType="BOOLEAN"/>
+      <BDA name="Check" bType="Check"/>
+    </DAType>
+    <DAType id="Originator1">
+      <BDA name="orCat" bType="Enum" type="OrCat"/>
+      <BDA name="orIdent" bType="Octet64"/>
+    </DAType>
+    <EnumType id="CtlModels">
+      <EnumVal ord="0">status-only</EnumVal>
+      <EnumVal ord="1">direct-with-normal-security</EnumVal>
+      <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+      <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+      <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+    </EnumType>
+    <EnumType id="BehaviourMode">
+      <EnumVal ord="0">on</EnumVal>
+      <EnumVal ord="1">blocked</EnumVal>
+      <EnumVal ord="2">test</EnumVal>
+      <EnumVal ord="3">test/blocked</EnumVal>
+      <EnumVal ord="4">off</EnumVal>
+    </EnumType>
+    <EnumType id="HealthKind">
+      <EnumVal ord="0">ok</EnumVal>
+      <EnumVal ord="1">warning</EnumVal>
+      <EnumVal ord="2">alarm</EnumVal>
+    </EnumType>
+    <EnumType id="FaultDirection">
+      <EnumVal ord="0">unknown</EnumVal>
+      <EnumVal ord="1">forward</EnumVal>
+      <EnumVal ord="2">backward</EnumVal>
+      <EnumVal ord="3">both</EnumVal>
+    </EnumType>
+    <EnumType id="OrCat">
+      <EnumVal ord="0">not-supported</EnumVal>
+      <EnumVal ord="1">bay-control</EnumVal>
+      <EnumVal ord="2">station-control</EnumVal>
+      <EnumVal ord="3">remote-control</EnumVal>
+      <EnumVal ord="4">automatic-bay</EnumVal>
+      <EnumVal ord="5">automatic-station</EnumVal>
+      <EnumVal ord="6">automatic-remote</EnumVal>
+      <EnumVal ord="7">maintenance</EnumVal>
+      <EnumVal ord="8">process</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</SCL>

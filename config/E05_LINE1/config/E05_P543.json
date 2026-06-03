@@ -1,0 +1,24 @@
+{
+  "ied_name": "E05_P543",
+  "ip": "127.0.0.1",
+  "port": 10251,
+  "goose_interface": "4",
+  "protection": {
+    "type": "distance",
+    "zone1_reach_ohm": 12.5,
+    "zone1_delay_ms": 0,
+    "zone2_reach_ohm": 25.0,
+    "zone2_delay_ms": 400,
+    "zone3_reach_ohm": 50.0,
+    "zone3_delay_ms": 1000,
+    "zone4_reach_ohm": 10.0,
+    "zone4_delay_ms": 500,
+    "ar_enabled": true,
+    "ar_max_attempts": 1,
+    "ar_dead_time_ms": 800,
+    "nominal_v_kv": 86.6,
+    "nominal_i_a": 200.0,
+    "nominal_freq": 50.0
+  },
+  "goose_subscriptions": []
+}
