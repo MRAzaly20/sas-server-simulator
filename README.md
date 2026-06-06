@@ -6,7 +6,7 @@
 
 ## 1. Project Overview & Scope
 
-This project is a **software-only simulation** of a complete 150kV switchyard for the a Nickel Smelter in Sulawesi, Indonesia. It is designed for:
+This project is a **software-only simulation** of a complete 150kV switchyard. It is designed for:
 
 - **SAS (Substation Automation System) commissioning engineers** to train on IEC 61850 communication workflows before deploying on physical hardware.
 - **Protocol developers** to test MMS clients (SCADA HMI, gateway) against a realistic data model.
