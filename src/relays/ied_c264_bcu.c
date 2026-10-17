@@ -202,7 +202,11 @@ static ControlHandlerResult bcu_control_handler(ControlAction action, void* para
     int is_close = MmsValue_getBoolean(value) ? 1 : 0;
     DataObject* node = ControlAction_getControlObject(action);
     if (!node) return CONTROL_RESULT_FAILED;
-    const char *objName = ((ModelNode*)node)->parent->name;
+    //    const char *objName = ((ModelNode*)node)->parent->name;
+    //command this
+    ModelNode* parentNode = ModelNode_getParent((ModelNode*)node);
+    if (!parentNode) return CONTROL_RESULT_FAILED;
+    const char *objName = ModelNode_getName(parentNode);
     
     printf("[BCU MMS] Control requested: %s -> %s\n", objName, is_close ? "CLOSE" : "OPEN");
     
